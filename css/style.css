@@ -1,0 +1,311 @@
+:root {
+    --banner: rgb(0, 0, 0);
+    --content-background: rgba(255, 255, 255, 0.65);
+    --font-light: rgb(255, 255, 255);
+    --font-dark: rgb(0, 0, 0);
+    --font-footer: rgba(110, 110, 110, 1);
+    --font-error: rgb(244, 6, 6);
+    --form-bg: rgba(0, 195, 255, 0.1);
+    --button: rgb(0, 170, 255, 0.5);
+    --button-hover: rgb(0, 138, 184);
+    --button-active: rgb(0, 143, 210);
+    --button-font: rgb(0, 0, 0);
+    --button-bg: rgba(0, 0, 0, 0.6);
+    --border-color: rgba(251, 251, 251, 0.37);
+    --border-color-active: rgb(175, 229, 238);
+    --input-bg: rgb(0, 0, 0);
+    --input-font-color: rgb(121, 224, 255);
+    --input-placeholder-color: rgba(255, 255, 255, 0.6);
+    --counter-font: rgb(0, 158, 161);
+    --link-font-color: rgb(44, 86, 193);
+}
+
+body {
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 16px;
+    color: var(--font-light);
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--font-dark);
+    width: 70%;
+    word-break: break-word;
+    overflow: hidden;
+    flex: 1;
+    max-height: fit-content;
+}
+
+.content {
+    background-color: var(--content-background);
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    
+}
+
+.content-transp {
+    background-color: none;
+    color: var(--font-light);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    background-color: var(--banner);
+    color: var(--font-footer);
+    margin-top: 30px;
+    padding: 10px;
+}
+
+header {
+    background-color: var(--banner);
+    text-align: center;
+}
+
+nav {
+    padding-bottom: 10px;
+}
+  
+button, .button {
+    text-decoration: none;
+    background-color: var(--button-bg);
+    color: var(--font-light);
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    height: fit-content;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .button:hover {
+    background: var(--button-hover);
+    box-shadow: 0px 0px 0px transparent;
+    text-shadow: 0px 0px 0px transparent;
+    border: 1px solid var(--border-color-active);
+}
+
+button:active, .button:active {
+    background: var(--button-active);
+    outline: none;
+}
+
+form {
+    background-color: var(--form-bg);
+    padding: 16px;
+    width: fit-content;
+    border: 1px solid var(--border-color);
+    border-radius: 2px;
+    margin: auto;
+    text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email] {
+    padding: 6px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    text-align: center;
+    border: 1px solid;
+    background-color: var(--input-bg);
+    border-color: var(--border-color);
+    border-radius: 2px;
+    color: var(--input-font-color);
+    display: block;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px var(--input-bg) inset !important;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: var(--input-font-color);
+  }
+
+::placeholder { /* Standard */
+    color: var(--input-placeholder-color);
+ }
+
+input[type=checkbox] {
+    width: 1em;
+    height: 1em;
+    border: 5em solid #000000;
+    cursor: pointer;
+    display: inline-block;
+}
+
+a {
+    color: var(--link-font-color);
+}
+
+li {
+    list-style: none;
+}
+
+ul li {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.error {
+    font-size: 14px;
+    color: var(--font-error);
+    display: none;
+}
+
+.logo {
+    text-shadow: 0px 0px 0px transparent;
+    background-size: cover;
+    height: 80px;
+    width: 300px;
+}
+
+.language-logo {
+  margin-right: 10px; /* opcjonalnie, aby dodać odstęp między obrazkiem a tekstem */
+  float: left;
+  height: 100px;
+  width: 100px;
+}
+
+.icon {
+    text-shadow: 0px 0px 0px transparent;
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+}
+
+figure {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+    max-width: fit-content;
+    height: 100%;
+    overflow: auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+.content-transparent {
+    padding: 20px;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    color: var(--font-light);
+    width: 70%;
+    word-break: break-word;
+    overflow: hidden;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.g-recaptcha-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.g-recaptcha {
+    display: block;
+}
+
+.consent {
+    max-width: 300px;
+    font-size: 11px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.profile-picture {
+    height: 100px;
+    width: 100px;
+    opacity: 0.5;
+    display: inline-block;
+}
+
+.user-data {
+    display: inline-block;
+}
+
+.centered {
+    text-align: center;
+}
+
+.single-line {
+    display: block;
+}
+
+#cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--banner);
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+#cookie-banner button {
+    background-color: var(--button-active);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* -------------------------------------- RESPONSIVITY --------------------------------------*/
+
+
+@media (max-width: 767px) {
+
+    main {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .footer-container {
+        width: 90%;
+    }
+
+    .content-transparent {
+        width: 100%;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    button {
+        min-width: fit-content;
+        width: 220px;
+        display: flexbox;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .footer {
+        font-size: 10px;
+    }
+}
