@@ -17,7 +17,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Darmowy serwis do nauki programowania">
-    <meta name="keywords" content="programowanie, java, javascript, html, css, darmo, programaster">
+    <meta name="keywords" content="java, Intellij IDEA, zmienne, metody, typy danych, instrukcje warunkowe, pętle">
     <meta name="author" content="Jarosław Masłowski">
 
     <title>Programaster</title>
@@ -31,21 +31,33 @@
       Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
       <button id="accept-button">Zgadzam się</button>
     </div>
-    <script src="js/googleComponents.js"></script>
+    <script src="js/googleAnalytics.js"></script>
 
     <script src="js/headerFunctions.js"></script>
     <header class="header">
       <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
       <nav>
-        <button onClick='navigate("index.html")'>Strona główna</button>
-        <button onClick='navigate("author.html")'>Kontakt</button>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
       </nav>
     </header>
     
     <main>
       <div class="content">
-        <h1 class="centered">Przygotowanie środowiska do programowania w języku Java</h1>
+        <h1 class="centered">Podstawy języka Java</h1>
+
+        <div class="navigation">
+          <button onClick='navigate("environment.html")'><span>&#8592;</span> poprzedni temat</button>
+          <!-- <button onClick='navigate("XXX.html")'>następny temat <span>&#8594;</span></button> -->
+        </div>
+
         
+
+        <div class="navigation">
+          <button onClick='navigate("environment.html")'><span>&#8592;</span> poprzedni temat</button>
+          <!-- <button onClick='navigate("XXX.html")'>następny temat <span>&#8594;</span></button> -->
+        </div><br/>
+
       </div>
     </main>
 

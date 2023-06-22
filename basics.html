@@ -17,7 +17,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Darmowy serwis do nauki programowania">
-    <meta name="keywords" content="programowanie, java, javascript, html, css, darmo, programaster">
+    <meta name="keywords" content="podstawy programowania, języki programowania, java, html, css, php, python, C, C#, C++, kod źródłowy, kompilacja">
     <meta name="author" content="Jarosław Masłowski">
 
     <title>Programaster</title>
@@ -31,26 +31,32 @@
       Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
       <button id="accept-button">Zgadzam się</button>
     </div>
-    <script src="js/googleComponents.js"></script>
+    <script src="js/googleAnalytics.js"></script>
 
     <script src="js/headerFunctions.js"></script>
     <header class="header">
       <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
       <nav>
-        <button onClick='navigate("index.html")'>Strona główna</button>
-        <button onClick='navigate("author.html")'>Kontakt</button>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
       </nav>
     </header>
     
     <main>
       <div class="content">
         <h1 class="centered">Podstawy programowania</h1>
-        <h2>Wstęp</h2>
+
+        <div class="navigation">
+          <button onClick='navigate("index.html")'><span>&#8592;</span> Strona główna</button>
+          <button onClick='navigate("environment.html")'>następny temat <span>&#8594;</span></button>
+        </div>
+
+        <h2 class="centered">Wprowadzenie</h2>
         <p>
-          Programowanie to proces tworzenia programów komputerowych, czyli zestawów instrukcji określających,
-          jakie działania ma wykonać komputer.<br/>
-          Aby komputer wykonywał instrukcje, muszą być one napisane w odpowiednim języku programowania.<br/>
-          Każdy język programowania tworzony jest z myślą o innym zastosowaniu:
+          <b>Programowanie</b> to proces tworzenia programów komputerowych,
+          czyli zestawów instrukcji określających, jakie działania ma wykonać komputer.
+          Instrukcje muszą być one napisane w odpowiednim <b>języku programowania</b>,
+          a każdy język programowania tworzony jest z myślą o innym zastosowaniu.
         </p>
           <ul>
             <li>
@@ -69,10 +75,10 @@
               gry, edytory dzwięku, grafiki, tekstu, komunikatory i wiele więcej...
             </li><br/>
           </ul>
-        <h2>Kod źródłowy</h2>
+        <h2 class="centered">Kod źródłowy</h2>
         <p>
-          Pierwszym etapem powstawania programu jest napisanie kodu źródłowego.<br/>
-          Ten rodzaj kodu jest zrozumiały dla człowieka, zakładając, że zna on składnię języka, w którym kod jest napisany.<br/>
+          Pierwszym etapem tworzenia programu jest napisanie <b>kodu źródłowego</b>.
+          Jest on zrozumiały dla człowieka, zakładając, że zna on składnię języka, w którym kod jest napisany.
           Języki programowania można wstępnie podzielić na dwie grupy:
         </p>
         <ul>
@@ -100,7 +106,7 @@
           <img style="width: 450px" src="img/asembler_source_code.jpg" alt="przykład kodu źródłowego">
         </figure>
 
-        <h2>Kod maszynowy</h2>
+        <h2 class="centered">Kod maszynowy</h2>
         <p>
           Aby program można było uruchomić musi on być przekształcony z kodu źródłowego na kod maszynowy.<br/>
           Kod maszynowy wygląda inaczej dla każdego urządzenia i procesora, a dla ludzi jest bardzo trudny lub niemożliwy do zrozumienia.<br/>
@@ -113,7 +119,7 @@
           <img style="width: 300px" src="img/machine_code2.jpg" alt="kod maszynowy">
         </figure>
         
-        <h2>Uruchamianie programu</h2>
+        <h2 class="centered">Uruchamianie programu</h2>
         <p>
           Kod źródłowy można przetłumaczyć na maszynowy na kilka sposobów, ponieważ sam sposób przekształcenia decyduje juz o pracy programu.
         </p>
@@ -138,7 +144,7 @@
           </li>
           <li>
             <b>Maszyna wirtualna</b> - Kod jest kompilowany do kodu pośredniego, a następnie,
-            w zależności od środowiska maszyna wirtualna interpretuje go lub kompiluje.
+            maszyna wirtualna uruchamia go w odpowiedni sposób dla danego środowiska.
             Jest to program, który symuluje środowisko sprzętowe i umożliwia uruchamianie aplikacji w izolowanym i kontrolowanym środowisku.
             Maszyny wirtualne zapewniają wieloplatformowość, czyli pozwalają na przenośność kodu między różnymi systemami operacyjnymi i środowiskami.
           </li>
@@ -146,7 +152,7 @@
 
 
 
-        <h2>Paradygmaty programowania</h2>
+        <h2 class="centered">Paradygmaty programowania</h2>
         <ul>
           <li>
             <b>Programowanie obiektowe</b> - opiera się na definiowaniu obiektów, które zawierają <b>stan</b> i <b>zachowanie</b> oraz komunikują się ze sobą za pomocą metod.<br/>
@@ -177,12 +183,12 @@
           </li>
 
         </ul>
-        <h2>Języki programowania</h2>
+        <h2 class="centered">Języki programowania</h2>
         <ul>
           <li>
             <img src="img/java_logo.jpg" class="language-logo" alt="java logo">
             <b>Java</b> - ogólnego przeznaczenia język programowania, który jest powszechnie stosowany do tworzenia aplikacji internetowych, mobilnych i desktopowych.
-            Java działa na Wirtualnej Maszynie Javy (JVM), co oznacza, że programy napisane w Javie mogą działać na różnych platformach, ale uruchamiają się wolniej.<br/>
+            Java działa na Wirtualnej Maszynie Javy (JVM), co oznacza, że programy napisane w Javie mogą działać na różnych platformach.<br/>
             Język głównie <b>obiektowy</b>, a w mniejszym stopniu proceduralny, funkcyjny i zdarzeniowy.
           </li><br/>
 
@@ -254,8 +260,13 @@
             C# jest językiem ogólnego przeznaczenia, który działa na platformie .NET.
           </li><br/>
 
-          
         </ul>
+
+        <div class="navigation">
+          <button onClick='navigate("index.html")'><span>&#8592;</span> Strona główna</button>
+          <button onClick='navigate("environment.html")'>następny temat <span>&#8594;</span></button>
+        </div><br/>
+
       </div>
     </main>
 

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2749072429683790"
+    crossorigin="anonymous"></script>
+
+     <!--Font Settings-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Darmowy serwis do nauki programowania">
+    <meta name="keywords" content="jre, jdk, jvm,  java, Intellij IDEA">
+    <meta name="author" content="Jarosław Masłowski">
+
+    <title>Programaster</title>
+
+  </head>
+  <body>
+
+    <noscript>Aby wyświetlić zawartość strony zainstaluj JavaScript</noscript>
+
+    <div id="cookie-banner">
+      Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
+      <button id="accept-button">Zgadzam się</button>
+    </div>
+    <script src="js/googleAnalytics.js"></script>
+
+    <script src="js/headerFunctions.js"></script>
+    <header class="header">
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+      <nav>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="content">
+        <h1 class="centered">Środowisko programowania w Java</h1>
+
+        <div class="navigation">
+          <button onClick='navigate("basics.html")'><span>&#8592;</span> poprzedni temat</button>
+          <button onClick='navigate("java_basics.html")'>następny temat <span>&#8594;</span></button>
+        </div>
+
+        <h2 class="centered">Twórcy Javy i narzędzia dla programistów i użytkowników</h2>
+
+        <p>
+          Java to język programowania, który został opracowany przez <b>Jamesa Goslinga</b> i jego zespół w firmie <b>Sun Microsystems</b>,
+          która obecnie należy do <b>Oracle Corporation</b>. Prace nad językiem rozpoczęły się w drugiej połowie lat 90. XX wieku,
+          a pierwsza publiczna wersja, <b>Java 1.0</b>, została wydana w roku 1996.<br/><br/>
+
+          Do roku 2023 powstała juz wersja <b>Java 20</b> i wprowadzono wiele zmian.
+          Na przykład przed wersją <b>Java 11</b> można było pobrać i zainstalować osobno:<br/>
+          <b>Java Runtime Environment (JRE)</b> i <b>Java Development Kit (JDK)</b>. Od wersji 11 do pobrania zostało tylko JDK, które zawiera JRE.
+        </p>
+
+        <figure>
+          <img style="width: 300px" src="img/scheme.jpg" alt="budowa java runtime environment i java development kit">
+        </figure>
+
+        <p>
+          <b>JDK</b> - Narzędzia dla programistów. Posiadają JRE i kompilator <b>Java Compiler</b>, który tłumaczy kod źródłowy na kod pośredni.<br/><br/>
+          <b>JRE</b> - Środowisko uruchamianiowe dla programów Java. Posiada <b>Maszynę Wirtualną Java</b> (JVM), która,
+          za pomocą kompilatora <b>Just-in-time Compiler</b> (JIT) tłumaczy kod pośredni (bytecode) na maszynowy i uruchamia program.
+        </p>
+
+        <h3 class="centered">Proces powstawania i uruchamiania programu</h3>
+
+        <figure>
+          <img style="width: 100px" src="img/source_code_file.png" alt="ikona pliku">
+          <figcaption>1. Napisanie kodu źródłowego</figcaption>
+        </figure>
+        
+        <figure> <img style="width: 20px" src="img/arrow_down.png" alt="strzałka w dół"></figure>
+
+        <figure>
+          <img style="width: 100px" src="img/java_compiler_icon.png" alt="ikona java">
+          <figcaption>
+            2. Kompilacja na kod pośredni
+          </figcaption>
+        </figure>
+        <figure>
+          <img style="width: 100px" src="img/byte_code_file.png" alt="ikona pliku">
+        </figure>
+
+        <figure> <img style="width: 20px" src="img/arrow_down.png" alt="strzałka w dół"></figure>
+
+        <figure>
+          <img style="width: 100px" src="img/java_virtual_machine_icon.png" alt="ikona java">
+          <figcaption>3. Wykonanie kodu</figcaption>
+        </figure>
+
+        <br/>
+
+        <h2 class="centered">Pobieranie i instalacja JDK</h2>
+        <p>
+          Wejdź na stronę podaną w linku, a następnie pobierz i zainstaluj najnowszą wersję JDK dla Twojego systemu operacyjnego:
+
+          <a href="https://www.oracle.com/pl/java/technologies/downloads/">
+          https://www.oracle.com/pl/java/technologies/downloads/
+          </a>
+        </p>
+
+        <p>Przykładowy wybór opcji dla systemu Windows...</p>
+        <figure>
+          <img style="width: 700px" src="img/install.jpg" alt="przykład kodu źródłowego">
+        </figure>
+
+        <br/>
+
+        <h2 class="centered">Edytor tekstowy</h2>
+
+        <p>
+          Kod źródłowy Java można napisać w zwykłym notatniku lub zaawansowanym edytorze tekstowym.
+          Napiszmy teraz pierwszy program w Javie z użyciem <b>Wiersza poleceń</b>, notatnika i zainstalowanego już JDK.
+        </p>
+
+        <figure>
+          <img style="width: 100px" src="img/terminal.png" alt="ikona wiersza poleceń">
+          <figcaption>
+            <b>Wiersz poleceń</b> (znany również jako terminal lub konsola) - jest interaktywnym interfejsem tekstowym dostępnym w systemach operacyjnych.
+            Pozwala na wprowadzanie i wykonanie poleceń tekstowych, takich jak uruchamianie programów, zarządzanie plikami i folderami, oraz konfigurację systemu.
+          </figcaption>
+        </figure>
+
+        <p>
+          1. Utwórz na pulpicie plik tekstowy o nazwie Powitanie.java<br/>
+          2. Umieść poniższy kod w pliku i zapisz go (upewnij się, że plik ma rozszerzenie "Powitanie.java" zamiast "Powitanie.java.txt"):
+        </p>
+
+        <pre>
+          <code>
+          public class Powitanie {
+              public static void main(String[] args) {
+                  System.out.println("Hello World !");
+              }
+          }
+          </code>
+        </pre>
+
+        <p>
+          3. Kliknij prawym przyciskiem myszy na utworzony plik na pulpicie i wybierz "właściwości". Zaznacz i skopiuj lokalizację pliku.<br/>
+          4. Aby dostać się do wiersza poleceń, kliknij przycisk "Start" w lewym dolnym rogu ekranu, wpisz "cmd.exe" w pasku wyszukiwania i kliknij pierwszy wynik.<br/>
+          5. Sprawdź, czy JDK jest zainstalowane poprawnie, wpisując komendę "java -version" (powinieneś otrzymać komunikat o wersji java)<br/>
+          6. Następnie wpisz "cd" kliknij raz spację i wklej skopiowaną wczesniej ścieżkę do pulpitu. Powinno to wyglądać tak: cd C:\Users\twoja nazwa użytkownika\Desktop.<br/>
+          7. Wpisz "javac Powitanie.java" aby skompilować kod Twojego programu. Na pulpicie powinien pojawić się teraz plik Powitanie.class<br/>
+          8. Wpisz "java Powitanie" aby uruchomić swój program. W konsoli powinien wyświetlić się napis "Hello World !"
+        </p>
+        <p>
+          Jeśli wszystko poszło ok, to właśnie napisałeś działający program w notatniku. Jak już wcześniej wspomniałem, istnieją również zaawansowane edytory tekstowe, czyli inaczej IDE.
+          Nazwa "IDE" jest skrótem od "Integrated Development Environment" (zintegrowane środowisko programistyczne).
+          Pomagają one poprawić literówki w kodzie, podświetlają składnię, czyniąc kod czytelniejszym, a nawet generują kod za ciebie.<br/>
+        </p>
+
+        <br/>
+
+        <h2 class="centered">Instalacja IDE</h2>
+
+        <figure> <img style="width: 400px" src="img/text_editors.png" alt="logo intelliJ IDEA, logo NetBeans, logo Eclipse, logo Visual Studio Code"></figure>
+
+        <p>
+          Osobiście korzystam z <b>IntelliJ IDEA</b> i dlatego proponuję instalację tego właśnie środowiska.<br/>
+          JetBrains - Producent tego środowiska oferuje wersję <b>Community Edition</b>, która jest darmowa i zapewnia dużo funkcjonalności,
+          które na początek w zupełności wystarczą.
+          Wejdź na stronę podaną w linku, a następnie pobierz i zainstaluj odpowiednią wersję dla Twojego systemu operacyjnego:
+
+          <a href="https://www.jetbrains.com/idea/download/?section=windows">
+            https://www.jetbrains.com/idea/download/?section=windows
+          </a>
+          <br/>
+
+          <p>Przykładowy wybór opcji dla systemu Windows...</p>
+          <figure>
+            <img style="width: 700px" src="img/install2.jpg" alt="instalacja IntelliJ IDEA">
+          </figure>
+
+          <p>Wybór wersji Cummunity Edition... (ten link znajduje się lekko niżej na stronie jetbrains)</p>
+          <figure>
+            <img style="width: 700px" src="img/install3.jpg" alt="instalacja IntelliJ IDEA">
+          </figure>
+
+        </p>
+
+        <div class="navigation">
+          <button onClick='navigate("basics.html")'><span>&#8592;</span> poprzedni temat</button>
+          <button onClick='navigate("java_basics.html")'>następny temat <span>&#8594;</span></button>
+        </div><br/>
+
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.facebook.com/profile.php?id=100092326486712">
+        <img class="icon" src="img/facebook_icon.png" alt="facebook logo"></img>
+      </a>
+      <a href="https://www.youtube.com/@programaster">
+        <img class="icon" src="img/youtube_icon.png" alt="youtube logo"></img>
+      </a>
+      <a href="https://www.instagram.com/programaster0/">
+        <img class="icon" src="img/instagram_icon.png" alt="instagram logo"></img>
+      </a>
+      <br/>
+      <label>2023 © Wszelkie prawa zastrzeżone.</label>
+      <a href="terms.html">Regulamin</a> <label> | </label> <a href="privacy-politics.html">Polityka prywatności</a>
+    </footer>
+      
+  </body>
+</html>

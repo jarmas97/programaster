@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
 
     <link rel="canonical" href="https://programaster.pl/index.html">
-    <link rel="canonical">
+    
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/style.css">
 
@@ -33,41 +33,38 @@
       Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
       <button id="accept-button">Zgadzam się</button>
     </div>
-    <script src="js/googleComponents.js"></script>
+    <script src="js/googleAnalytics.js"></script>
     
     <script src="js/headerFunctions.js"></script>
     <header class="header">
       <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
       <nav>
-        <button onClick='navigate("index.html")'>Strona główna</button>
-        <button onClick='navigate("author.html")'>Kontakt</button>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
       </nav>
     </header>
   
     <main>
-      <div class="content-transp">
-        <p class="centered">DARMOWY SERWIS DO NAUKI PROGRAMOWANIA</p>
-      </div>
-      <div class="content">
-        <h3>TEMATY OPRACOWANE</h3>
-        <button onClick='navigate("basics.html")'>
-          PODSTAWY PROGRAMOWANIA
-        </button>
-        <br/>
+      <div class="content-centered">
+        <h3 class="centered">TEMATY OPRACOWANE</h3>
+          <button onClick='navigate("basics.html")'>PODSTAWY PROGRAMOWANIA</button>
+          <br/>
+          <button onClick='navigate("environment.html")'>ŚRODOWISKO PROGRAMOWANIA JAVA</button>
+          <br/>
+          <button onClick='navigate("java_basics.html")'>PODSTAWY JĘZYKA JAVA</button>
+          <br/>
+
         <h3>TEMATY ZAPLANOWANE</h3>
-        <ul>
-          <li>Przygotowanie środowiska do programowania w języku Java</li><br/>
-          <li>Podstawy programowania w Języku Java</li><br/>
-          <li>Kolekcje</li><br/>
-          <li>Strumienie i lambdy</li><br/>
-          <li>Wielowątkowość</li><br/>
-          <li>Wyjątki</li><br/>
-          <li>HTML</li><br/>
-          <li>CSS</li><br/>
-          <li>JavaScript</li><br/>
-          <li>Spring Boot</li><br/>
-          <li>React</li><br/>
-        </ul>
+
+        <p>Kolekcje</p>
+        <p>Strumienie i lambdy</p>
+        <p>Wielowątkowość</p>
+        <p>Wyjątki</p>
+        <p>HTML</p>
+        <p>CSS</p>
+        <p>JavaScript</p>
+        <p>Spring Boot</p>
+        <p>React</p>
       </div>
     </main>
 
