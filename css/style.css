@@ -1,6 +1,6 @@
 :root {
     --banner: rgb(0, 0, 0);
-    --content-background: rgba(255, 255, 255, 0.548);
+    --content-background: rgba(255, 255, 255, 0.6);
 
     --font-light: rgb(255, 255, 255);
     --font-dark: rgb(0, 0, 0);
@@ -47,8 +47,8 @@ main {
 
 .content, .content-centered {
     background-color: var(--content-background);
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 40px;
+    padding-left: 40px;
     padding-bottom: 2px;
     padding-top: 2px;
 }
@@ -75,7 +75,7 @@ nav {
     padding-bottom: 10px;
 }
   
-button, .tab{
+button, .tab, .figure-link {
     background-color: var(--button);
     color: var(--font-light);
     border: 1px solid var(--border-grey);
@@ -88,7 +88,7 @@ button, .tab{
     transition: background-color 0.4s ease;
 }
 
-button:hover, .tab:hover {
+button:hover, .tab:hover, .figure-link:hover {
     background-color: var(--button-hover);
     border: 1px solid var(--border-light-grey);
 
@@ -113,6 +113,10 @@ li {
 ul li {
     display: inline-block;
     margin-top: 10px;
+}
+
+h1, h2, h3 {
+    text-align: center;
 }
 
 .error {
@@ -146,6 +150,7 @@ ul li {
 figure {
     width: 100%;
     max-width: fit-content;
+    height: fit-content;
     height: 100%;
     overflow: auto;
     display: block;
@@ -249,16 +254,19 @@ footer a {
         width: 90%;
     }
 
-    .content-transparent {
-        width: 100%;
-        margin-right: 0px;
-        margin-left: 0px;
+    .content, .content-centered {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 
     button {
         min-width: fit-content;
         width: 220px;
         display: flexbox;
+    }
+
+    .code-example {
+        overflow-x: scroll;
     }
 
 }

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://programaster.pl</loc>
+    <loc>https://programaster.pl/index.html</loc>
     <lastmod>2023-06-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -16,8 +16,15 @@
   </url>
 
   <url>
-    <loc>https://programaster.pl/environment.html</loc>
+    <loc>https://programaster.pl/java1.html</loc>
     <lastmod>2023-06-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://programaster.pl/java2.html</loc>
+    <lastmod>2023-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
