@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2749072429683790"
+    crossorigin="anonymous"></script>
+
+     <!--Font Settings-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+
+    
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Darmowy serwis do nauki programowania">
+    <meta name="keywords" content="Dla początkujących, Podstawy programowania, Kod źródłowy, Maszynowy, Uruchamianie programu, Kompilacja, Interpretacja kodu, Maszyna wirtualna, Omówienie języków i paradygmatów programowania, Java od podstaw, Wprowadzenie do języka Java, Instalacja środowiska programistycznego, Narzędzia dla programistów, Składnia języka Java, Praca w środowisku IntelliJ IDEA, Zmienne, Typy danych, Operatory, Instrukcje warunkowe, Pętle, Tablice, Tworzenie projektu w IntelliJ IDEA, Programowanie obiektowe, Tworzenie obiektów i metod, Klasy statyczne, Dziedziczenie, Klasy abstrakcyjne, Interfejsy, Polimorfizm">
+    <meta name="author" content="Jarosław Masłowski">
+
+    <title>Programaster</title>
+
+  </head>
+  <body>
+
+    <noscript>Aby wyświetlić zawartość strony zainstaluj JavaScript</noscript>
+
+    <div id="cookie-banner">
+      Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
+      <button id="accept-button">Zgadzam się</button>
+    </div>
+    <script src="js/googleAnalytics.js"></script>
+
+    <script src="js/headerFunctions.js"></script>
+    <header class="header">
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+      <nav>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="content">
+        
+        <h2>Języki programowania</h2>
+        <ul>
+          <li>
+            <img src="img/java_logo.jpg" class="language-logo" alt="java logo">
+            <b>Java</b> - ogólnego przeznaczenia język programowania, który jest powszechnie stosowany do tworzenia aplikacji internetowych, mobilnych i desktopowych.
+            Java działa na Wirtualnej Maszynie Javy (JVM), co oznacza, że programy napisane w Javie mogą działać na różnych platformach.<br/>
+            Język głównie obiektowy, a w mniejszym stopniu proceduralny, funkcyjny i zdarzeniowy.
+          </li><br/>
+
+          <li>
+            <img src="img/python_logo.jpg" class="language-logo" alt="python logo">
+            <b>Python</b> - Python jest wykorzystywany w wielu dziedzinach, w tym w analizie danych, sztucznej inteligencji,
+            automatyce, tworzeniu gier i programowaniu webowym. Język ten charakteryzuje się również ogromną liczbą bibliotek,
+            które ułatwiają pracę programistów i przyspieszają proces tworzenia oprogramowania.
+            Kod pisany w języku Python jest interpretowany (jest przetwarzany bezpośrednio przez interpreter, który czyta kod linia po linii i natychmiast wykonuje instrukcje).
+          </li><br/>
+
+          <li>
+            <img src="img/javascript_logo.jpg" class="language-logo" alt="javascript logo">
+            <b>JavaScript</b> - skryptowy język programowania, który jest stosowany do tworzenia dynamicznych i interaktywnych aplikacji internetowych.
+            JavaScript oferuje wiele funkcji, które ułatwiają interakcję użytkownika z aplikacją, takie jak zdarzenia, animacje czy zmiana treści na stronie.<br/>
+
+          </li><br/>
+
+          <li>
+            <img src="img/html_logo.jpg" class="language-logo" alt="html logo">
+            <b>HTML</b> - (HyperText Markup Language) to język programowania stosowany do tworzenia stron internetowych.
+            Jest to język oparty na znacznikach, co oznacza, że strona internetowa jest tworzona poprzez dodawanie różnych znaczników do tekstu,
+            które opisują jego strukturę i treść.
+          </li><br/>
+          
+          <li>
+            <img src="img/css_logo.jpg" class="language-logo" alt="css logo">
+            <b>CSS</b> - (Cascading Style Sheets) to język stosowany do definiowania stylów dla stron internetowych i innych dokumentów HTML.
+            CSS umożliwia programistom kontrolowanie prezentacji dokumentów HTML,
+            w tym kolorów, układu, fontów, marginesów, wyrównania i wielu innych aspektów.
+          </li><br/>
+
+          <li>
+            <img src="img/php_logo.jpg" class="language-logo" alt="php logo">
+            <b>PHP</b> - (Hypertext Preprocessor) jest używany przede wszystkim do tworzenia stron internetowych i aplikacji webowych,
+            umożliwiając generowanie dynamicznych treści, manipulowanie danymi z formularzy,
+            tworzenie sesji użytkowników oraz interakcję z bazami danych.<br/>Jest to język typowo serwerowy,
+            co oznacza, że skrypty PHP są wykonywane po stronie serwera.
+          </li><br/>
+
+          <li>
+            <img src="img/sql_logo.jpg" class="language-logo" alt="sql logo">
+            <b>SQL</b> - (Structured Query Language) to język zapytań do baz danych.
+            Słuzy do zarządzania bazami danych, w tym tworzenia, modyfikowania i usuwania tabel oraz wprowadzania,
+            modyfikowania i usuwania danych.
+            Umożliwia również wykonywanie złożonych zapytań, filtrowanie i sortowanie danych,
+            łączenie tabel oraz agregowanie i grupowanie wyników zapytań.
+          </li><br/>
+
+          <li>
+            <img src="img/c_logo.jpg" class="language-logo" alt="c logo">
+            <b>C</b> -  jest często używany do programowania systemów operacyjnych,
+            sterowników i innych aplikacji krytycznych dla wydajności i niezawodności,
+            ale także jest stosowany w aplikacjach ogólnego przeznaczenia, takich jak gry,
+            programy multimedialne i narzędzia programistyczne.
+          </li><br/>
+
+          <li>
+            <img src="img/cplusplus_logo.jpg" class="language-logo" alt="c++ logo">
+            <b>C++</b> - jest językiem programowania, który wywodzi się z języka C.
+            Jest to język ogólnego przeznaczenia, który znalazł zastosowanie w różnych dziedzinach,
+            w tym w programowaniu systemów operacyjnych, tworzeniu gier, a także w aplikacjach biurowych i sieciowych.
+          </li><br/>
+
+          <li>
+            <img src="img/csharp_logo.jpg" class="language-logo" alt="c# logo">
+            <b>C#</b> - również wywodzi się z języka C, jest stworzony przez Microsoft,
+            który jest często stosowany do tworzenia aplikacji Windows i gier komputerowych.
+            C# jest językiem ogólnego przeznaczenia, który działa na platformie .NET.
+          </li><br/>
+
+        </ul>
+
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.facebook.com/profile.php?id=100092326486712">
+        <img class="icon" src="img/facebook_icon.png" alt="facebook logo"></img>
+      </a>
+      <a href="https://www.youtube.com/@programaster">
+        <img class="icon" src="img/youtube_icon.png" alt="youtube logo"></img>
+      </a>
+      <a href="https://www.instagram.com/programaster0/">
+        <img class="icon" src="img/instagram_icon.png" alt="instagram logo"></img>
+      </a>
+      <br/>
+      <label>2023 © Wszelkie prawa zastrzeżone.</label>
+      <a href="terms.html">Regulamin</a> <label> | </label> <a href="privacy-politics.html">Polityka prywatności</a>
+    </footer>
+      
+  </body>
+</html>
