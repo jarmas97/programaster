@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
 
+    <link rel="canonical" href="https://programaster.pl/index.html">
+
     <link rel="icon" href="img/favicon.ico" />
     <link rel="stylesheet" href="css/style.css">
 
@@ -45,251 +47,56 @@
     <main>
       <div class="content">
 
-        <h1>Składnia języka Java i praca w środowisku IntelliJ IDEA</h1>
+        <h1>Kurs Java - Pobieranie i instalacja narzędzi</h1>
 
         <div class="navigation">
           <button onClick='navigate("java1.html")'><span>&#8592;</span> poprzedni temat</button>
           <button onClick='navigate("java3.html")'>następny temat <span>&#8594;</span></button>
-        </div>
+        </div><br/>
 
-        <h2>Zmienne i typy danych</h2>
+        <h2>Pobieranie i instalacja JDK</h2>
+
         <p>
-          Zmienne są podstawowym narzędziem w programowaniu. Przechowują dane, nadają nazwy wartościom i pozwalają nimi manipulować.
-        </p>
-        <p>
-          Nazwy zmiennych powinny być opisowe i jasne, aby łatwo było zrozumieć, co reprezentują.
-          Zapisując w programie dane, takie jak imię i nazwisko lepiej będzie nazwać je "name" i "surname" zamiast "x" i "y".
-          Takie nazewnictwo jest intuicyjne i zrozumiałe dla innych (zagranicznych) programistów.
+          Zgodnie z poprzednim tematem, do napisania i uruchomienia programu potrzebne jest JDK, które zawiera narzędzia dla programistów
+          i środowisko uruchomieniowe.
         </p>
 
-        <h3>Camel Case</h3>
+        <p>
+          Wejdź na stronę podaną w linku, a następnie pobierz i zainstaluj najnowszą wersję JDK dla Twojego systemu operacyjnego:
 
+          <a href="https://www.oracle.com/pl/java/technologies/downloads/">
+          https://www.oracle.com/pl/java/technologies/downloads/
+          </a>
+        </p>
+
+        <p>Przykładowy wybór opcji dla systemu Windows...</p>
         <figure>
-          <img style="width: 300px" src="img/camel.jpg" alt="wielbłąd">
-        </figure>
-
-        <p>
-          Camel Case to konwencja nazywania zmiennych, które składają się z wielu słów.
-          Pierwsze słowo zapisuje się małymi literami, a każde kolejne dużymi (tylko pierwsza litera), aby poprawić czytelność,
-          ponieważ nazwy zmiennych nie mogą zawierać odstępów, czyli "spacji" lub inaczej znaków białych.
-        </p>
-
-        <figure>
-          <img style="width: 500px" src="img/variables3.jpg" alt="zmienna zapisana w camel case">
+          <img style="width: 700px" src="img/install.jpg" alt="przykład kodu źródłowego">
         </figure>
 
         <br/>
 
-        <h2>Deklaracja i przypisanie wartości</h2>
-
-        <figure>
-          <img style="width: 500px" src="img/variables1.jpg" alt="deklaracja i przypisanie zmiennej w java">
-        </figure>
+        <h2>Wiersz poleceń</h2>
 
         <p>
-          <u>Pierwsza linijka to <b>deklaracja</b> zmiennej:</u><br/>
-          <b><i>int</i></b> - typ zmiennej, informacja o tym, że zmienna przechowuje liczby całkowite<br/>
-          <b><i>length</i></b> - nazwa zmiennej<br/>
-          <b><i>;</i></b> - zakończenie instrukcji
-        </p>
-
-        <p>
-          <u>Druga linijka to <b>przypisanie wartości</b>:</u><br/>
-          Do zadeklarowanej wcześniej zmiennej <b><i>length</i></b> przypisujemy wartość <b><i>15</i></b>
-        </p>
-
-        <p>
-          <u>Trzecia linijka to <b>deklaracja i przypisanie</b>:</u><br/>
-          Deklaracja zmiennej liczbowej o nazwie <b><i>height</i></b> i przypisanie jej wartości <b><i>15</i></b>
-        </p>
-
-        <br/>
-
-        <h2>Typy danych i ich zakres przechowywania</h2>
-
-        <figure>
-          <img style="width: 500px" src="img/variables2.jpg" alt="typy danych w java">
-        </figure>
-
-        <p>
-          <b>TYPY LICZBOWE</b>:<br/><br/>
-          <b><i>byte</i></b> - przechowuje liczby całkowite <b>od</b> -128 <b>do</b> 127<br/><br/>
-          <b><i>short</i></b> - przechowuje liczby całkowite <b>od</b> -32 768 <b>do</b> 32 767<br/><br/>
-          <b><i>int</i></b> - przechowuje liczby całkowite <b>od</b> -2 147 483 648 <b>do</b> 2 147 483 647<br/><br/>
-          <b><i>long</i></b> - przechowuje liczby całkowite <b>od</b> -9 223 372 036 854 775 808 <b>do</b> 9 223 372 036 854 775 807<br/>
-          <b>UWAGA! przypisując wartość do zmiennej typu 'long' należy dodać 'L' na końcu</b><br/><br/>
-          <b><i>float</i></b> - przechowuje liczby zmiennoprzecinkowe z częścią dziesiętną <b>do</b> około 7 miejsca po przecinku<br/>
-          <b>UWAGA! przypisując wartość do zmiennej typu 'float' należy dodać 'F' na końcu</b><br/><br/>
-          <b><i>double</i></b> - przechowuje liczby zmiennoprzecinkowe z częścią dziesiętną <b>do</b> około 15 miejsca po przecinku
-        </p>
-
-        <p>
-          <b>TYPY ZNAKOWE</b>:<br/><br/>
-          <b><i>char</i></b> - przechowuje pojedyncze znaki, np. litery, cyfry, znaki specjalne.<br/>
-        </p>
-
-        <p>
-          <b>TYPY LOGICZNE</b>:<br/><br/>
-          <b><i>boolean</i></b> - przechowuje wartość logiczną <b>true</b> (prawda) lub <b>false</b> (fałsz).
-        </p>
-
-        <br/>
-
-        <h2>Operatory</h2>
-
-        <p>
-          <b>OPERATOR PRZYPISANIA</b> "=" <br/>
-          Przypisuje wartość z prawej strony do zmiennej po lewej stronie, np. int x = 5;<br/><br/>
-          
-          <b>OPERATORY ARYTMETYCZNE</b>:<br/>
-
-          Dodawanie "+" <br/>
-          Odejmowanie "-" <br/>
-          Mnożenie "*" <br/>
-          Dzielenie "/" <br/>
-          Reszta z dzielenia "%" <br/><br/>
-
-          <b>OPERATORY PORÓWNANIA</b>:<br/>
-
-          Równy "==" <br/>
-          Nierówny "!=" <br/>
-          Większy niż ">" <br/>
-          Mniejszy niż "<" <br/>
-          Większy lub równy ">=" <br/>
-          Mniejszy lub równy "<=" <br/><br/>
-
-          <b>OPERATORY LOGICZNE</b>:<br/>
-
-          Negacja "!" <br/>
-          "i" logiczne "&&" <br/>
-          "lub" logiczne "||" <br/><br/>
-
-          <b>OPERATORY INKREMENTACJI I DEKREMENTACJI</b>:<br/>
-
-          Inkrementacja "++" <br/>
-          Dekrementacja "--" <br/><br/>
-
-          <b>Pozostałe operatory będą omówione po utworzeniu projektu w IntelliJ</b>:<br/>
-          operator warunkowy (if, else)<br/>
-          operator pętli (for, while, do-while)
-        </p>
-
-        <br/>
-
-        <h2>Tworzenie projektu</h2>
-
-        <p>
-          W poprzednim temacie przedstawiony był przykład programu, napisanego za pomocą notatnika, a następnie skompilowanego i uruchomionego za pomocą JDK.
-          Teraz zaprezentuję jak stworzyć taki program w IntelliJ IDEA.
-        </p>
-
-        <p>
-          Uruchum IntelliJ IDEA i utwórz nowy projekt.
+          Kod źródłowy Java można napisać w zwykłym notatniku lub zaawansowanym edytorze tekstowym.
+          Napiszmy teraz pierwszy program w Javie z użyciem <b>Wiersza poleceń</b>, notatnika i zainstalowanego już JDK.
         </p>
 
         <figure>
-          <img style="width: 700px" src="img/intellij_screen1.jpg" alt="zrzut ekranu IntelliJ IDEA">
+          <img style="width: 100px" src="img/terminal.png" alt="ikona wiersza poleceń">
+          <figcaption>
+            <b>Wiersz poleceń</b> (znany również jako terminal lub konsola) - jest interaktywnym interfejsem tekstowym dostępnym w systemach operacyjnych.
+            Pozwala na wprowadzanie i wykonanie poleceń tekstowych, takich jak uruchamianie programów, zarządzanie plikami i folderami, oraz konfigurację systemu.
+          </figcaption>
         </figure>
 
         <p>
-          Utwórz nazwę projektu "javaTraining" i wskaż ścieżkę do zainstalowanego JDK.<br/>
-          IntelliJ powinien wykryć JDK na Twoim komputerze i wyświetlić je w rozwiniętym menu pod nazwą "Detected SDKs".<br/>
-          Gdyby tak się nie stało, należy wybrać "Add JDK..." i wskazać ścieżkę.<br/>
-          <u>Pamietaj, by odznaczyć "Add sample code"</u><br/>
-          Resztę zaznacz zgodnie z ilustracją i kliknij przycisk "Create".<br/>
+          1. Utwórz na pulpicie plik tekstowy o nazwie Powitanie.java<br/>
+          2. Umieść poniższy kod w pliku i zapisz go (upewnij się, że plik ma rozszerzenie "Powitanie.java" zamiast "Powitanie.java.txt"):
         </p>
 
-        <figure>
-          <img style="width: 700px" src="img/intellij_screen2.jpg" alt="zrzut ekranu IntelliJ IDEA">
-        </figure>
-
-        <p>
-          Utworzony projekt powinien wyglądać tak...
-        </p>
-
-        <figure>
-          <img style="width: 700px" src="img/intellij_screen3.jpg" alt="zrzut ekranu IntelliJ IDEA">
-        </figure>
-
-        <p>
-          W menu po lewej stronie znajduje się struktura projektu i folder <b>src</b> wewnątrz niego oznaczony na niebiesko.<br/>
-          Jest to specjalny folder do przechowywania kodu źródłowego.
-        </p>
-
-        <p>
-          Kliknij na niego prawym przyciskiem myszy i utwórz w nim plik klasy o nazwie "Main".
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen4.jpg" alt="tworzenie klasy w IntelliJ IDEA">
-        </figure>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen5.jpg" alt="tworzenie klasy w IntelliJ IDEA">
-        </figure>
-
-        <p>
-          Tak powinna wyglądać utworzona klasa...
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen6.jpg" alt="tworzenie klasy w IntelliJ IDEA">
-        </figure>
-
-        <br/>
-
-        <h2>Klasy i metody</h2>
-
-        <p>
-          Klasa jest podstawowym budulcem programów w Javie i jest używana do organizowania kodu źródłowego.
-          Można ją traktować jako szablon, na podstawie którego tworzone są instancje obiektów. 
-        </p>
-
-        <figure>
-          <img style="width: 300px" src="img/intellij_screen7.jpg" alt="klasa java">
-        </figure>
-
-        <p>
-          W utworzonej klasie <b>public</b> jest <b>modyfikatorem dostępu</b>, który określa dostępność klasy w obrębie całego programu,
-          <b>class</b> to słowo kluczowe, definiujące klasę. Dalej znajduje się nazwa klasy, która jest dowolna, ale pisana z dużej litery i taka sama jak nazwa pliku .java, w którym się znajduje.
-          Dalej znajduje sie klamra otwierająca "{" i zamykająca "}". Wewnątrz nich umieszcza się ciało klasy, czyli pola (zmienne) i metody.
-        </p>
-
-        <p>
-          Utwórz nową linię po klamrze otwierającej ciało klasy i wpisz skrót "psvm" i wybierz pierwszy wynik, aby utworzyć metodę startową programu.
-        </p>
-
-        <figure>
-          <img style="width: 500px" src="img/intellij_screen8.jpg" alt="zrzut ekranu IntelliJ IDEA">
-        </figure>
-
-        <p>
-          Powinna ona wyglądać tak...
-        </p>
-
-        <figure>
-          <img style="width: 400px" src="img/intellij_screen9.jpg" alt="metoda main java">
-        </figure>
-
-        <p>
-          Utworzona metoda posiada modyfikator dostępu public, którego dodanie do metody, podobnie jak do klasy, powoduje dostępność metody w obrębie całego programu.
-          Następnie znajduje się słowo kluczowe <b>static</b>, oznaczające, że metoda jest częścią klasy, a nie jej instancji (wyjaśnię później, co to znaczy).
-          Słowo kluczowe <b>void</b>, to typ zwracany po użyciu metody, który oznacza, że metoda nic nie zwraca (również opowiem o tym później).
-          Dalej jest nazwa metody <b>main</b>. Nazwa klasy, w której znajduje się metoda main, jest dowolna, jednak metoda startowa zawsze programu musi się nazywać "main".
-          Zaraz po nazwie metody, bez odstępu umieszczone są nawiasy ( ), w których umieszcza się parametry, przyjmowane przez metodę.
-          W przypadku metody main jest to tablica ciągów znaków o nazwie "args", która służy do przekazywania argumentów wiersza poleceń do programu podczas jego uruchamiania.
-        </p>
-
-        <p>
-          Na razie nie ma potrzeby dokładnie rozumieć tej struktury, ponieważ metoda main zawsze tak wygląda i służy do uruchomienia programu.<br/>
-          Istotne jest tutaj ciało metody pomiędzy klamrami { }.<br/>
-        </p>
-
-        <p>
-          W poprzednim temacie przedstawiony był program "Powitanie", który wyświetlał napis "Hello World !".<br/>
-        </p>
-
-        <pre class="code-example">
+        <pre>
           <code>
           public class Powitanie {
               public static void main(String[] args) {
@@ -300,270 +107,51 @@
         </pre>
 
         <p>
-          Teraz prawdopodobnie możesz rozumiec z niego więcej. Jest klasa i metoda główna z jednym poleceniem w ciele.<br/>
-          System.out.println("Hello World !"); - to polecenie wyświetla napis w konsoli.
+          3. Kliknij prawym przyciskiem myszy na utworzony plik na pulpicie i wybierz "właściwości". Zaznacz i skopiuj lokalizację pliku.<br/>
+          4. Aby dostać się do wiersza poleceń, kliknij przycisk "Start" w lewym dolnym rogu ekranu, wpisz "cmd.exe" w pasku wyszukiwania i kliknij pierwszy wynik.<br/>
+          5. Sprawdź, czy JDK jest zainstalowane poprawnie, wpisując komendę "java -version" (powinieneś otrzymać komunikat o wersji java)<br/>
+          6. Następnie wpisz "cd" kliknij raz spację i wklej skopiowaną wczesniej ścieżkę do pulpitu. Powinno to wyglądać tak: cd C:\Users\twoja nazwa użytkownika\Desktop.<br/>
+          7. Wpisz "javac Powitanie.java" aby skompilować kod Twojego programu. Na pulpicie powinien pojawić się teraz plik Powitanie.class<br/>
+          8. Wpisz "java Powitanie" aby uruchomić swój program. W konsoli powinien wyświetlić się napis "Hello World !"
         </p>
-
         <p>
-          Aby utworzyć takie polecenie, wpisz skrót "sout" i wybierz pierwszy wynik.
-        </p>
-
-        <figure>
-          <img style="width: 400px" src="img/intellij_screen10.jpg" alt="zrzut ekranu IntelliJ IDEA">
-        </figure>
-
-        <p>
-          W wygenerowanym poleceniu wpisz "Hello World !" we wskazanym miejscu i uruchom program, klikając miejsce oznaczone na ilustracji.
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen11.jpg" alt="zrzut ekranu IntelliJ IDEA">
-        </figure>
-
-        <p>
-          Oto wynik działania programu...
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen12.jpg" alt="zrzut ekranu IntelliJ IDEA">
-        </figure>
-
-        <br/>
-
-        <h2>Instrukcja warunkowa if else</h2>
-
-        <pre class="code-example">
-          <code>
-            if (warunek) {
-                instrukcje do wykonania, jeśli warunek się spełni
-            } else {
-                instrukcje do wykonania, jeśli warunek nie się spełni
-            }
-          </code>
-        </pre>
-
-        <p>
-          Instrukcja "if" sprawdza warunek umieszczony w nawiasach okrągłych.
-          Jeśli warunek jest spełniony, wykonuje się kod w bloku po słowie kluczowym "if".
-          W przeciwnym razie, wykonuje się kod w bloku po słowie kluczowym "else".
-          Blok "else" jest opcjonalny.
-        </p>
-
-        <p>
-          Przykład...
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen13.jpg" alt="instrukcja warunkowa if else">
-        </figure>
-
-        <p>
-          Po uruchomieniu programu w konsoli wyświetli się napis "Użytkownik jest nieletni", ponieważ zmienna age przechowuje wartośc 15.
-        </p>
-
-        <figure>
-          <img style="width: 700px" src="img/intellij_screen14.jpg" alt="instrukcja warunkowa if else">
-        </figure>
-
-        <br/>
-
-        <h2>Instrukcja warunkowa switch case</h2>
-
-        <pre class="code-example">
-          <code>
-            switch (wyrażenie) {
-                case wartość1:
-                    Kod do wykonania, jeśli wyrażenie jest równe wartości1
-                    break;
-                case wartość2:
-                    Kod do wykonania, jeśli wyrażenie jest równe wartości2
-                    break;
-                default:
-                    Kod do wykonania, jeśli wyrażenie nie pasuje do żadnej wartości
-            }
-          </code>
-        </pre>
-
-        <p>
-          Instrukcja "switch" sprawdza wartość wyrażenia.
-          Jeśli wartość pasuje do jednego z przypadków "case", wykonuje się kod w tym przypadku.
-          Każdy przypadek powinien zawierać instrukcję "break", która powoduje zakończenie działania switch-a.
-          Jeśli żaden przypadek nie pasuje do wartości, wykonuje się kod w bloku "default".
-          Blok "default" jest opcjonalny.
-        </p>
-
-        <p>
-          Przykład...
-        </p>
-
-        <figure>
-          <img style="width: 700px" src="img/intellij_screen15.jpg" alt="instrukcja warunkowa switch case">
-        </figure>
-
-        <p>
-          Po uruchomieniu programu w konsoli wyświetli się napis "Środa", ponieważ zmienna dayOfWeek przechowuję wartość 3.
-        </p>
-
-        <figure>
-          <img style="width: 700px" src="img/intellij_screen16.jpg" alt="instrukcja warunkowa switch case">
-        </figure>
-
-        <br/>
-
-        <h2>Pętla for</h2>
-
-        <pre class="code-example">
-          <code>
-            for (inicjalizacja; warunek; iteracja) {
-                Kod do wykonania w każdej iteracji
-            }
-          </code>
-        </pre>
-
-        <p>
-          Pętla "for" wykonuje się przez określoną liczbę iteracji (powtórzeń).
-          W nawiasach okrągłych po słowie kluczowym "for" umieszcza się trzy części:<br/>
-          <b>Inicjalizacja</b> Określa początkową wartość licznika lub innych zmiennych kontrolujących pętlę.<br/>
-          <b>Warunek</b> Określa warunek, który musi być spełniony, aby pętla kontynuowała działanie.<br/>
-          <b>Iteracja</b> Definiuje, jakie zmiany mają miejsce po każdej iteracji, np. inkrementacja lub dekrementacja licznika.
-        </p>
-
-        <p>
-          Przykład...
-        </p>
-
-        <figure>
-          <img style="width: 700px" src="img/intellij_screen17.jpg" alt="pętla for">
-        </figure>
-
-        <p>
-          Działanie pętli for w tym przykładzie jest następujące:<br/><br/>
-
-          Początkowo, zmienna i jest ustawiona na 0.<br/>
-          Następnie, sprawdzany jest warunek i < 5. Jeśli jest spełniony, wykonuje się blok kodu wewnątrz pętli.<br/>
-          W tym przypadku, wyświetlana jest wartość i przy użyciu System.out.println(i).<br/>
-          Po zakończeniu wykonania bloku kodu, zmienna i jest zwiększana o 1 za pomocą i++.<br/>
-          Proces powtarza się, aż warunek i < 5 nie jest już spełniony (gdy i osiągnie wartość 5 lub większą).<br/>
-          Ostatecznie, na konsoli zostaną wyświetlone liczby od 0 do 4, ponieważ pętla wykonuje się 5 razy (dla wartości i od 0 do 4).
+          Jeśli wszystko poszło ok, to właśnie napisałeś działający program w notatniku. Jak już wcześniej wspomniałem, istnieją również zaawansowane edytory tekstowe, czyli inaczej IDE.
+          Nazwa "IDE" jest skrótem od "Integrated Development Environment" (zintegrowane środowisko programistyczne).
+          Pomagają one poprawić literówki w kodzie, podświetlają składnię, czyniąc kod czytelniejszym, a nawet generują kod za ciebie.<br/>
         </p>
 
         <br/>
 
-        <h2>Pętla while</h2>
+        <h2>Pobieranie i Instalacja IDE</h2>
 
-        <pre class="code-example">
-          <code>
-            while (warunek) {
-                Kod do wykonania dopóki warunek jest spełniony
-            }
-          </code>
-        </pre>
+        <figure> <img style="width: 400px" src="img/text_editors.png" alt="logo intelliJ IDEA, logo NetBeans, logo Eclipse, logo Visual Studio Code"></figure>
 
         <p>
-          Instrukcja "while" wykonuje się dopóki warunek jest spełniony.
-          Warunek sprawdzany jest przed każdą iteracją.
-          Jeśli warunek jest spełniony, kod w bloku {} jest wykonywany. 
+          Istnieje kilka środowisk do pisania kodu.
+          Osobiście korzystam z <b>IntelliJ IDEA Community Edition</b>,
+          które jest darmowe i zapewnia dużo funkcjonalności nie tylko dla początkujących programistów,
+          dlatego właśnie proponuję instalację tego właśnie środowiska.
         </p>
 
         <p>
-          Przykład...
+          Wejdź na stronę podaną w linku, a następnie pobierz i zainstaluj odpowiednią wersję dla Twojego systemu operacyjnego:
+
+          <a href="https://www.jetbrains.com/idea/download/?section=windows">
+            https://www.jetbrains.com/idea/download/?section=windows
+          </a>
+          <br/>
+
+          <p>Przykładowy wybór opcji dla systemu Windows...</p>
+          <figure>
+            <img style="width: 700px" src="img/install2.jpg" alt="instalacja IntelliJ IDEA">
+          </figure>
+
+          <p>Wybór wersji Cummunity Edition... (ten link znajduje się lekko niżej na stronie jetbrains)</p>
+          <figure>
+            <img style="width: 700px" src="img/install3.jpg" alt="instalacja IntelliJ IDEA">
+          </figure>
+
         </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen18.jpg" alt="pętla while">
-        </figure>
-
-        <p>
-          Działanie pętli while w tym przykładzie jest następujące:<br/><br/>
-
-          Początkowo, zmienna number jest ustawiona na 0.<br/>
-          Następnie, sprawdzany jest warunek number < 5. Jeśli jest spełniony, wykonuje się blok kodu wewnątrz pętli.<br/>
-          W tym przypadku, wyświetlana jest wartość number przy użyciu System.out.println(number).<br/>
-          Po zakończeniu wykonania bloku kodu, zmienna number jest zwiększana o 1 za pomocą number++.<br/>
-          Proces powtarza się, aż warunek number < 5 nie jest już spełniony (gdy number osiągnie wartość 5 lub większą).<br/>
-          Ostatecznie, na konsoli zostaną wyświetlone liczby od 0 do 4, ponieważ pętla wykonuje się 5 razy (dla wartości number od 0 do 4).
-        </p>
-
-        <br>
-
-        <h2>Pętla do while</h2>
-
-        <pre class="code-example">
-          <code>
-            do {
-                Kod do wykonania przed sprawdzeniem warunku
-            } while (warunek);
-          </code>
-        </pre>
-
-        <p>
-          Instrukcja "do-while" jest podobna do pętli "while", ale różnica polega na tym,
-          że warunek jest sprawdzany po wykonaniu bloku {}.
-          Oznacza to, że kod wewnątrz bloku {} jest wykonywany przynajmniej raz, nawet jeśli warunek na początku nie jest spełniony.
-          Jeśli warunek jest spełniony, kod w bloku {} jest kontynuowany.
-        </p>
-
-        <p>
-          Przykład...
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen19.jpg" alt="pętla do while">
-        </figure>
-
-        <p>
-          Działanie pętli do-while w tym przykładzie jest następujące:<br/><br/>
-
-          Początkowo, zmienna i jest ustawiona na 0.<br/>
-          Następnie, wykonywany jest blok kodu wewnątrz pętli, który wyświetla wartość i przy użyciu System.out.println(i).<br/>
-          Po zakończeniu wykonania bloku kodu, zmienna i jest zwiększana o 1 za pomocą i++.<br/>
-          Następnie, warunek i < 5 jest sprawdzany. Jeśli warunek jest spełniony, pętla zostaje ponownie wykonana, a proces się powtarza.<br/>
-          Proces kontynuuje się, dopóki warunek i < 5 jest spełniony.<br/>
-          Ostatecznie, na konsoli zostaną wyświetlone liczby od 0 do 4, ponieważ pętla wykonuje się 5 razy (dla wartości i od 0 do 4).
-        </p>
-
-        <br/>
-
-        <h2>Tablice</h2>
-
-        <p>
-          Tablica w języku Java to struktura danych, która przechowuje kolekcję elementów tego samego typu.
-          Dostęp do jej elementów jest możliwy za pomocą indeksów.
-          Można ją zadeklarować na dwa sposoby:
-        </p>
-
-        <pre class="code-example">
-          <code>
-            int[] numbers;
-            int numbers[];
-          </code>
-        </pre>
-
-        <p>
-          Aby przypisać wartość tablicy, używa się słowa kluczowego <b>new</b>, następnie w nawiasach kwadratowych podaje się rozmiar tablicy.
-        </p>
-
-        <pre class="code-example">
-          <code>
-            numbers  = new int[5];
-          </code>
-        </pre>
-
-        <p>Przykład...</p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen20.jpg" alt="tablica w języku java">
-        </figure>
-
-        <p>
-          <b>int[] numbers = new int[5];</b>
-          Tworzy nową tablicę numbers o rozmiarze 5, która będzie przechowywać liczby całkowite.<br/>
-          Pięć kolejnych instrukcji to przypisanie różnych pięciu wartości liczbowych do każdego elementu tablicy.<br/>
-          <b>Należy zwrócić uwagę na fakt, że indeksy zaczynają się od 0, a nie od 1.</b><br/>
-          Pięć następnych instrukcji to wyświetlanie każdego elementu według jego indeksu.<br/>
-        </p>
-
-        <br/>
 
         <br/>
 
