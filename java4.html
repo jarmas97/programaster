@@ -2,10 +2,6 @@
 <html lang="pl">
   <head>
 
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2749072429683790"
-    crossorigin="anonymous"></script>
-
      <!--Font Settings-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +15,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Darmowy serwis do nauki programowania">
-    <meta name="keywords" content="Dla początkujących, Podstawy programowania, Kod źródłowy, Maszynowy, Uruchamianie programu, Kompilacja, Interpretacja kodu, Maszyna wirtualna, Omówienie języków i paradygmatów programowania, Java od podstaw, Wprowadzenie do języka Java, Instalacja środowiska programistycznego, Narzędzia dla programistów, Składnia języka Java, Praca w środowisku IntelliJ IDEA, Zmienne, Typy danych, Operatory, Instrukcje warunkowe, Pętle, Tablice, Tworzenie projektu w IntelliJ IDEA, Programowanie obiektowe, Tworzenie obiektów i metod, Klasy statyczne, Dziedziczenie, Klasy abstrakcyjne, Interfejsy, Polimorfizm">
+    <meta name="keywords" content="programowanie, kurs, java, za darmo, początkujący">
     <meta name="author" content="Jarosław Masłowski">
 
     <title>Programaster</title>
@@ -47,190 +43,209 @@
     <main>
       <div class="content">
 
-        <h1>Kurs Java - Programowanie obiektowe</h1>
-
+        <h1>Kurs Java - Składnia języka Java część I</h1>
+        
         <div class="navigation">
-          <button onClick='navigate("java3.html")'><span>&#8592;</span> poprzedni temat</button>
-          <!-- <button onClick='navigate("java5.html")'>następny temat <span>&#8594;</span></button> -->
+            <button onClick='navigate("java3.html")'><span>&#8592;</span> poprzedni temat</button>
+            <button onClick='navigate("java5.html")'>następny temat <span>&#8594;</span></button>
         </div><br/>
 
+        <h2>Zmienne</h2>
         <p>
-          W poprzednim temacie przedstawione zostały zmienne, których głównym zadaniem jest przechowanie wartości.
-          Obiekt jest rodzajem zmiennej, która posiada <b>stan oraz zachowanie</b>.
-          Oznacza to, że obiekt może przechować wartości i uruchamiać metody.
+          Zmienne są podstawowym narzędziem w programowaniu. Przechowują dane, nadają nazwy wartościom i pozwalają nimi manipulować.<br/>
+          W matematyce zmienna jest często pojedynczą literą lub symbolem, jednak w programowaniu nazwy zmiennych
+          powinny być opisowe i jasne, aby łatwo było zrozumieć, co reprezentują, ponieważ jeśli napiszesz program,
+          w którym imię zapiszesz w zmiennej "x", nazwisko w "y", a wiek w "z", zrozumienie dalszych operacji będzie utrudnione.
+        </p>
+        <p>
+          Kod źródłowy w Javie i wielu innych językach pisany jest w języku angielskim, ponieważ jest on szeroko używany jako
+          język międzynarodowej komunikacji, zarówno w świecie nauki, jak i biznesu.
+          Dlatego właśnie najlepszą praktyką jest nazywać zmienne również po angielsku.
+          Zmienna przechowująca imię powinna nazywać się na przykład "name", a nazwisko "surname".
         </p>
 
         <p>
-          Bardzo istotnym typem danych w Javie jest typ <b>String</b>, który słóży do przechowania ciągu znaków.
-          Typ String jest obiektowy i podczas deklaracji zmiennej tego i innych typów obiektowych należy pisać je z dużej litery.
+          Kiedy nazwa zmiennej wymaga użycia wielu słów, nie można stosować odstępów pomiędzy nimi.
+          Aby poprawić czytelność takiego zapisu, stosuje się konwencję nazewnictwa <b>Camel Case</b>.
+          Nazwa konwencji odnosi się do garbów wielbłąda, a polega ona na tym, że pierwsze słowo zapisuje się małymi literami,
+          a kolejne rozpoczyna się z dużej litery.
         </p>
 
         <figure>
-          <img style="width: 300px" src="img/string_example.jpg" alt="kod źródłowy klasy">
+          <img style="width: 250px" src="img/camel.jpg" alt="wielbłąd">
         </figure>
+
+        <figure>
+          <img style="width: 250px" src="img/variables1.jpg" alt="zmienna zapisana w camel case">
+        </figure>
+
+        <p>
+          Powyższy przykład kodu to <b>deklaracja zmiennej</b>. W Javie instrukcja ta wymaga określenia <b>typu danych</b>, jakie zmienna będzie przechowywać,
+          dlatego pierwszy element instrukcji to <b>int</b>, czyli określenie, że zmienna przechowywać będzie liczby całkowite.
+          Następnie znajduje się <b>camelCaseVariable</b>, czyli nazwa zmiennej , zapisana w stylu camel case.
+          Ostatni element to średnik <b>;</b> , który jest zakończeniem każdej instrukcji.
+        </p>
+
+        <p>
+          Zmiennej można przypisać wartość za pomocą <b>operatora przypisania</b> deklarując zmienną i przypisując jej wartość w dwóch oddzielnych instrukcjach:
+        </p>
+
+        <figure>
+          <img style="width: 200px" src="img/variables2.jpg" alt="deklaracja i przypisanie wartości zmiennej">
+        </figure>
+
+        <p>
+          lub przypisać zmiennej wartość w momencie jej deklaracji:
+        </p>
+
+        <figure>
+          <img style="width: 220px" src="img/variables3.jpg" alt="deklaracja i przypisanie wartości zmiennej">
+        </figure>
+
         <br/>
 
-        <h2>Tworzenie własnych obiektów</h2>
+        <h2>Metody</h2>
 
         <p>
-          Aby utworzyć własny obiekt, trzeba najpierw zdefiniować jego strukturę, a definicją jego struktury jest klasa.
-          Dobrym przykładem obiektu może być samochód.
-          Jego stanem może być marka, model i kolor, a zachowaniem uruchomienie i zatrzymanie pracy silnika.
-        </p>
-        <p>
-          W projekcie "javaTraining" z poprzedniego tematu utwórz klasę "Car" w folderze src i uzupełnij zawartość klasy według ilustracji.
+          Metody w programowaniu służą do grupowania związanych ze sobą instrukcji w celu wykonania określonych zadań.
         </p>
 
         <figure>
-          <img style="width: 700px" src="img/intellij_screen21.jpg" alt="kod źródłowy klasy">
+          <img style="width: 350px" src="img/method1.jpg" alt="metoda java">
         </figure>
 
         <p>
-          Zmienne zadeklarowane w ciele klasy nazywane są <b>polami klasy</b> i reprezentują one stan obiektu.
-          W przypadku klasy Car są to brand, model i color. Wszystkie pola są typu String, ponieważ mają przechować ciąg znaków.
+          Powyższy przykład kodu to <b>deklaracja metody</b>. Podobnie jak przy deklaracji zmiennej, metoda musi posiadać typ danych.<br/>
+          W metodzie jest to <b>typ zwracany</b>, który określa jaki będzie typ wyniku jej działania.
+          W powyższej metodzie <b>int</b> oznacza zwrócenie liczby całkowitej. Następnie znajduje się <b>getSomeNumber</b>,
+          czyli nazwa metody, również zapisana w stylu camel case.
         </p>
 
         <p>
-          Następnie zdefiniwane są metody engineOn() i engineOff().
-          Przed ich nazwą podany jest typ String, ponieważ w tym miejscu określa się jaki typ danych zwraca metoda po wykonaniu instrukcji w jej ciele.
-          Obie metody mają zwrócić ciąg znaków, dlatego ich typem zwracanym jest String.
-          W ciele metod znajduje się słowo kluczowe <b>return</b>, po użyciu którego należy podać wartość, jaką ma zwracać metoda.
-          Po słowie kluczowym return w cudzysłowie określony jest ciąg znaków do zwrócenia, odpowiednio dla każdej metody.
+          Nazwa metody powinna określać wynik otrzymany po jej wykonaniu. Powyższa metoda ma zwracać liczbę,
+          dlatego jej nazwa "getSomeNumber" oznacza "uzyskaj jakąś liczbę".
+          Zaraz obok nazwy metody umieszcza się okrągłe nawiasy, wewnątrz których można (ale nie trzeba) przekazać metodzie <b>argumenty</b>.
+          Następnie wewnątrz nawiasów klamrowych <b>{ }</b> określa się <b>ciało metody</b>, wewnątrz którego znajdują się instrukcje do wykonania.
         </p>
 
         <p>
-          Posiadając zdefiniowaną klasę Car, można teraz utworzyć instancję klasy (obiekt).
-          W metodzie startowej w klase Main można utworzyć przykładowy obiekt samochodu.
+          Wewnątrz ciała metody znajduje się słowo kluczowe <b>return</b>, po użyciu którego należy podać wynik działania metody i zakończyć instrukcję średnikiem.
+          W powyższym przykładzie wynikiem jest liczba <b>5</b>.
         </p>
 
         <figure>
-          <img style="width: 700px" src="img/intellij_screen22.jpg" alt="kod źródłowy klasy">
+          <img style="width: 550px" src="img/method2.jpg" alt="metoda java argumenty">
         </figure>
 
         <p>
-          Pierwsza instrukcja metody main to utworzenie zmiennej typu <b>Car</b> o nazwie <b>car</b> i przypisanie jej nowej instancji klasy Car.
-          Za utworzenie nowej instancji obiektu odpowiada słowo kluczowe <b>new</b> i podanie konstruktora klasy <b>Car()</b>.
-          Jest to metoda, którą posiada każda klasa. Jeśli nie zdefiniuje się w klasie konstruktora, zostaje utworzony domyślny, nie przyjmujący żadnych parametrów.
-          Jego nazwa musi być taka sama jak nazwa klasy, w której się znajduje i zwraca on utworzoną instancję klasy,
-          według parametrów, przekazanych w okrągłych nawiasach. Przekazanie parametrów jes opcjonalne, więc nawiasy mogą być puste.
+          Ta metoda przedstawia wykorzystanie argumentów (int firstNumber, int secondNumber) przekazanych metodzie.
+          Argumenty przekazuje się po przecinku a każdy z nich musi mieć określony typ danych.
+          Z powodu większej ilości instrukcji w ciele metody utworzono kilka nowych linii po klamrze otwierającej,
+          a klamra zamykająca ciało znajduje się po ich zakończeniu, aby poprawić czytelność kodu.
         </p>
 
         <p>
-          Kolejne pięć poleceń to wyświetlanie zawartości utworzonej instancji obiektu "car".
-          Do wyświetlenia zawartości pól klasy użyta jest kropka i nazwa pola, którego zawartość ma być wyświetlona.<br/>
-          <b>car.brand</b><br/>
-          Analogiczna sytuacja jest w przypadku wywołania metod. Różnica polega na tym, że przy metodach trzeba dopisać nawiasy.<br/>
-          <b>car.engineOn()</b><br/>
+          W ciele metody zdefiniowana została zmienna <b>result</b> (wynik) a następnie <b>operatorem przypisania</b> = ,
+          przypisana jest jej wartość sumy dwóch liczb przekazanych jako argumenty metody, dodanych za pomocą <b>operatora arytmetycznego</b> +.
+          Następnie z użyciem słowa kluczowego return zwracana jest zmienna result jako wynik działania metody.
         </p>
 
         <p>
-          Po uruchomieniu programu, w konsoli wyświetla się 5 linii:<br/><br/>
-          <b>Audi</b> ponieważ car.brand = "Audi"<br/>
-          <b>R8</b> ponieważ car.model = "R8"<br/>
-          <b>Black</b> ponieważ car.color = "Black"<br/>
-          <b>Uruchomienie silnika</b> ponieważ car.engineOn() zwraca ciąg znaków "Uruchomienie silnika"<br/>
-          <b>Zatrzymanie pracy silnika</b> ponieważ car.engineOff() zwraca ciąg znaków "Zatrzymanie pracy silnika"<br/>
-        </p><br/>
-
-        <h2>Wykorzystanie konstruktora</h2>
-
-        <p>
-          No dobra.. mamy więc klasę "Car", która pozwala nam na utworzenie czarnego Audi R8.
-          Gdybyśmy chcieli uwtorzyć inny samochód w przedstawiony sposób, wymagałoby to utworzenia kolejnej klasy, ponieważ podane pola mają przypisane stałe wartości.
-          Można dokonać jednak refaktoryzacji (przebudowy) kodu, aby klasa Car pozwalała na tworzenie instancji z innym stanem (inne marki, modele i kolory).
-          Aby tego dokonać potrzebny będzie właśnie wyżej wspomniany konstruktor, który przypisze polom instancji klasy wartości według podanych parametrów.
+          Nazwa metody <b>addNumbers()</b> opisuje jej dzianie, ponieważ najpierw pobrane są 2 liczby,
+          później dodane do siebie i ostatecznie zwrócona jest ich suma.
         </p>
 
+        <br/>
+
+        <h2>Typy danych</h2>
+
         <p>
-          W klasie Car pozostaw tylko deklarację jej pól i usuń przypisane im wartości a następnie utwórz taki konstruktor:
+          Powyżej przedstawiono użycie liczbowego typu danych "int", ale w Javie jest ich znacznie więcej.
+          Poniższa ilustracja przedstawia typy danych w Javie i wartości jakie można im przypisać.
         </p>
 
         <figure>
-          <img style="width: 700px" src="img/intellij_screen23.jpg" alt="kod źródłowy klasy">
+          <img style="width: 500px" src="img/data_types.jpg" alt="typy danych java">
         </figure>
 
         <p>
-          Konstruktor musi posiadać modyfikator dostępu <b>public</b>, aby dało się go użyć w innych klasach (na przykład w klasie Main).<br/>
-          Nie posiada on typu zwracanego jak inne metody, a jego nazwa jest taka sama, jak nazwa klasy.<br/>
-          Przyjmuje 3 parametry typu String: <b>String brand</b>, <b>String model</b>, <b>String color</b>.
-          Użycie słowa kluczowego <b>this</b> oznacza odniesienie do instancji klasy, więc <b>this.brand</b> to odniesienie do pola brand danej instancji.<br/>
-          <b>this.brand = brand;</b> to przypisanie wartości parametru z konstruktora do pola klasy.<br/>
-          Aby łatwiej było odróżnić co gdzie jest przypisane IntelliJ podświetla pola klasy na fioletowo a parametry metody na biało.
+          <b>TYPY LICZBOWE</b>:<br/><br/>
+          <b><i>byte</i></b> - przechowuje liczby całkowite <b>od</b> -128 <b>do</b> 127<br/><br/>
+          <b><i>short</i></b> - przechowuje liczby całkowite <b>od</b> -32 768 <b>do</b> 32 767<br/><br/>
+          <b><i>int</i></b> - przechowuje liczby całkowite <b>od</b> -2 147 483 648 <b>do</b> 2 147 483 647<br/><br/>
+          <b><i>long</i></b> - przechowuje liczby całkowite <b>od</b> -9 223 372 036 854 775 808 <b>do</b> 9 223 372 036 854 775 807<br/>
+          <b>UWAGA! przypisując wartość do zmiennej typu 'long' należy dodać 'L' na końcu</b><br/><br/>
+          <b><i>float</i></b> - przechowuje liczby zmiennoprzecinkowe z częścią dziesiętną <b>do</b> około 7 miejsca po przecinku<br/>
+          <b>UWAGA! przypisując wartość do zmiennej typu 'float' należy dodać 'F' na końcu</b><br/><br/>
+          <b><i>double</i></b> - przechowuje liczby zmiennoprzecinkowe z częścią dziesiętną <b>do</b> około 15 miejsca po przecinku
         </p>
 
         <p>
-          W metodzie startowej main można teraz utworzyć kilka modeli samochodów, przekazując przez konstruktor inne parametry dla każdej instancji:
+          <b>TYPY ZNAKOWE</b>:<br/><br/>
+          <b><i>char</i></b> - przechowuje pojedyncze znaki, np. litery, cyfry, znaki specjalne.<br/>
+        </p>
+
+        <p>
+          <b>TYPY LOGICZNE</b>:<br/><br/>
+          <b><i>boolean</i></b> - przechowuje wartość logiczną <b>true</b> (prawda) lub <b>false</b> (fałsz).
+        </p>
+
+        <br/>
+
+        <h2>Operatory</h2>
+
+        <p>
+          <b>OPERATOR PRZYPISANIA</b> "=" <br/>
+          Przypisuje wartość z prawej strony do zmiennej po lewej stronie, np. int x = 5;<br/><br/>
+          
+          <b>OPERATORY ARYTMETYCZNE</b>:<br/>
+
+          Dodawanie "+" <br/>
+          Odejmowanie "-" <br/>
+          Mnożenie "*" <br/>
+          Dzielenie "/" <br/>
+          Reszta z dzielenia "%" <br/><br/>
+
+          <b>OPERATORY PORÓWNANIA</b>:<br/>
+
+          Równy "==" <br/>
+          Nierówny "!=" <br/>
+          Większy niż ">" <br/>
+          Mniejszy niż "<" <br/>
+          Większy lub równy ">=" <br/>
+          Mniejszy lub równy "<=" <br/><br/>
+
+          <b>OPERATORY LOGICZNE</b>:<br/>
+
+          Negacja "!" <br/>
+          "i" logiczne "&&" <br/>
+          "lub" logiczne "||" <br/><br/>
+
+          <b>OPERATORY INKREMENTACJI I DEKREMENTACJI</b>:<br/>
+
+          Inkrementacja "++" <br/>
+          Dekrementacja "--" <br/><br/>
+        </p>
+
+        <br/>
+
+        <h2>Ćwiczenia</h2>
+
+        <p>
+          W projekcie "javaTraining" z poprzedniego tematu zdefiniuj kilka własnych zmiennych z każdego typu
+          , przypisz im wartości i wyświetl je. <b>Pamiętaj o średniku na końcu każdej instrukcji</b>.
         </p>
 
         <figure>
-          <img style="width: 700px" src="img/intellij_screen24.jpg" alt="kod źródłowy klasy">
+          <img style="width: 500px" src="img/task1.jpg" alt="zmienne java">
         </figure>
 
-        <p>
-          Jak widać po wynikach konsoli, klasa Car pozwala teraz na utworzenie instancji obiektów o różnych parametrach.
-        </p><br/>
 
-        <h2>Enkapsulacja - dobre praktyki programowania</h2>
-
-        <p>
-          Powyżej przedstawiłem jak tworzyć pola i metody klasy w możliwie zrozumiały sposób,
-          jednak podczas tworzenia metod i pól klasy zalecane jest zachowanie zasady enkapsulacji.<br/>
-          Enkapsulacja ma na celu izolowanie stanu i zachowania obiektu, aby zapewnić integralność danych i kontrolę nad operacjami,
-          które można na nim wykonać.
-          Oznacza to, że zmienne (pola) obiektu są zazwyczaj prywatne,
-          a dostęp do nich odbywa się poprzez publiczne metody (gettery i settery).
-        </p>
-
-        <p>Aby klaca Car była napisana zgodnie z zasadą enkapsulacji wprowadź następujące zmiany zgodnie z ilustracją:</p>
-
-        <figure>
-          <img style="width: 500px" src="img/intellij_screen25.jpg" alt="kod źródłowy klasy">
-        </figure>
-
-        <p>
-          Po dodaniu modyfikatorów dostępu <b>private</b> do pól klasy i <b>public</b> do metod, IntelliJ informuje nas o błędach w klasie Main.
-          Problem wynika z tego, że w klasie main próbujemy uzyskać wartość pól, do których nie mamy już dostępu (za pomocą kropki),
-          z powodu oznaczenia ich jako <b>private</b>.
-        </p>
-
-        <figure>
-          <img style="width: 300px" src="img/intellij_screen26.jpg" alt="kod źródłowy klasy">
-        </figure>
-
-        <p>
-          Od teraz aby uzyskać dostęp do pól klasy trzeba będzie skorzystać z <b>getterów i setterów</b> zgodnie z zasadą enkapsulacji.
-          Gettery to metody, które zwracają wartość pola klasy, a settery mogą modyfikować pola klasy, kiedy jest to potrzebne.
-          Dostęp do getterów i setterów jest możliwy poza klasą ponieważ posiadają modyfikator dostępu <b>public</b>.
-        </p>
-
-        <p>
-          Dodaj gettery i settery do klasy Car według ilustracji:
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen27.jpg" alt="kod źródłowy klasy">
-        </figure>
-
-        <p>
-          Od teraz dostęp do pól klasy Car możliwy jest z użyciem getterów. Popraw kod w klasie Main zgodnie z ilustracją:
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen28.jpg" alt="kod źródłowy klasy">
-        </figure>
-
-        <p>
-          Jeśli chcesz zmienić kolor samochodu, możesz użyć teraz metody setColor()
-          podając w nawiasach nowy kolor samochodu, zapisany ciągiem znaków i następnie sprawdzić czy kolor się zmienił, używając getColor()
-        </p>
-
-        <figure>
-          <img style="width: 600px" src="img/intellij_screen29.jpg" alt="kod źródłowy klasy">
-        </figure>
+        <br/>
 
         <div class="navigation">
-          <button onClick='navigate("java3.html")'><span>&#8592;</span> poprzedni temat</button>
-          <!-- <button onClick='navigate("java5.html")'>następny temat <span>&#8594;</span></button> -->
+            <button onClick='navigate("java3.html")'><span>&#8592;</span> poprzedni temat</button>
+            <button onClick='navigate("java5.html")'>następny temat <span>&#8594;</span></button>
         </div><br/>
 
       </div>
