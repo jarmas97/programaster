@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+     <!--Font Settings-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+
+    <link rel="canonical" href="https://programaster.pl/index.html">
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Darmowy serwis do nauki programowania">
+    <meta name="keywords" content="programowanie, kurs, java, za darmo, początkujący">
+    <meta name="author" content="Jarosław Masłowski">
+
+    <title>Programaster</title>
+
+  </head>
+  <body>
+
+    <noscript>Aby wyświetlić zawartość strony zainstaluj JavaScript</noscript>
+
+    <div id="cookie-banner">
+      Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
+      <button id="accept-button">Zgadzam się</button>
+    </div>
+    <script src="js/googleAnalytics.js"></script>
+
+    <script src="js/headerFunctions.js"></script>
+    <header class="header">
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+      <nav>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="content">
+
+        <h1>Kurs Java - Składnia języka Java - część II</h1>
+        
+        <div class="navigation">
+            <button onClick='navigate("java4.html")'><span>&#8592;</span> poprzedni temat</button>
+            <button onClick='navigate("java6.html")'>następny temat <span>&#8594;</span></button>
+        </div><br/>
+
+        <h2>Instrukcja warunkowa if else</h2>
+
+        <p>
+          Instrukcja "if" sprawdza warunek umieszczony w nawiasach okrągłych.
+          Jeśli warunek jest spełniony, wykonuje się kod w bloku po słowie kluczowym "if".
+          W przeciwnym razie, wykonuje się kod w bloku po słowie kluczowym "else".
+          Blok "else" jest opcjonalny.
+        </p>
+
+        <pre class="code-example">
+          <code>
+            if (warunek) {
+                instrukcje do wykonania, jeśli warunek się spełni
+            } else {
+                instrukcje do wykonania, jeśli warunek się nie spełni
+            }
+          </code>
+        </pre>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen13.jpg" alt="instrukcja warunkowa if else">
+        </figure>
+
+        <p>
+          W programie zdefiniowana jest zmienna "age" i przypisana jest jej wartość 15.
+          Następnie w nawiasach instrukcji "if" operatorem porównania sprawdzany jest warunek ( czy zmienna jest mniejsza niż 18).
+          W bloku kodu instrukcji if, pomiędzy klamrami { } znajduje instrukcja wykonana kiedy warunek się spełni,
+          a w bloku kodu else, kiedy się nie spełni.
+        </p>
+
+        <p>
+          Wynikiem działania programu jest blok kodu instrukcji if "Użytkownik jest nieletni", ponieważ 15 jest mniejsze niż 18.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen14.jpg" alt="instrukcja warunkowa if else">
+        </figure>
+
+        <br/>
+
+        <h2>Instrukcja warunkowa switch case</h2>
+
+        <p>
+          Instrukcja "switch" sprawdza wartość wyrażenia.
+          Jeśli wartość pasuje do jednego z przypadków "case", wykonuje się kod w tym przypadku.
+          Każdy przypadek powinien zawierać instrukcję "break", która powoduje zakończenie działania switch-a.
+          Jeśli żaden przypadek nie pasuje do wartości, wykonuje się kod w bloku "default".
+          Blok "default" jest opcjonalny.
+        </p>
+
+        <pre class="code-example">
+          <code>
+            switch (wyrażenie) {
+                case wartość1:
+                    Kod do wykonania, jeśli wyrażenie jest równe wartości1
+                    break;
+                case wartość2:
+                    Kod do wykonania, jeśli wyrażenie jest równe wartości2
+                    break;
+                default:
+                    Kod do wykonania, jeśli wyrażenie nie pasuje do żadnej wartości
+            }
+          </code>
+        </pre>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen15.jpg" alt="instrukcja warunkowa switch case">
+        </figure>
+
+        <p>
+          Po uruchomieniu programu w konsoli wyświetli się napis "Środa", ponieważ zmienna dayOfWeek przechowuję wartość 3.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen16.jpg" alt="instrukcja warunkowa switch case">
+        </figure>
+
+        <p>
+          Instrukcje warunkowe stosuje się naprzemiennie w zależności od potrzeb użycia w programie.
+        </p>
+
+        <br/>
+
+        <h2>Pętla for</h2>
+
+        <p>
+          Pętla "for" wykonuje się przez określoną liczbę iteracji (powtórzeń).
+          W nawiasach okrągłych po słowie kluczowym "for" umieszcza się trzy części:<br/>
+          <b>Inicjalizacja</b> Określa początkową wartość licznika lub innych zmiennych kontrolujących pętlę.<br/>
+          <b>Warunek</b> Określa warunek, który musi być spełniony, aby pętla kontynuowała działanie.<br/>
+          <b>Iteracja</b> Definiuje, jakie zmiany mają miejsce po każdej iteracji, np. inkrementacja lub dekrementacja licznika.
+        </p>
+
+        <pre class="code-example">
+          <code>
+            for (inicjalizacja; warunek; iteracja) {
+                Kod do wykonania w każdej iteracji
+            }
+          </code>
+        </pre>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen17.jpg" alt="pętla for">
+        </figure>
+
+        <p>
+          Działanie pętli for w tym przykładzie jest następujące:<br/><br/>
+
+          Początkowo, zmienna i jest ustawiona na 0.<br/>
+          Następnie, sprawdzany jest warunek i < 5. Jeśli jest spełniony, wykonuje się blok kodu wewnątrz pętli.<br/>
+          W tym przypadku, wyświetlana jest wartość i przy użyciu System.out.println(i).<br/>
+          Po zakończeniu wykonania bloku kodu, zmienna i jest zwiększana o 1 za pomocą i++ (inkrementacja).<br/>
+          Proces powtarza się, aż warunek i < 5 nie jest już spełniony (gdy i osiągnie wartość 5 lub większą).<br/>
+          Ostatecznie, na konsoli zostaną wyświetlone liczby od 0 do 4, ponieważ pętla wykonuje się 5 razy (dla wartości i od 0 do 4).
+        </p>
+
+        <br/>
+
+        <h2>Pętla while</h2>
+
+        <pre class="code-example">
+          <code>
+            while (warunek) {
+                Kod do wykonania dopóki warunek jest spełniony
+            }
+          </code>
+        </pre>
+
+        <p>
+          Instrukcja "while" wykonuje się dopóki warunek jest spełniony.
+          Warunek sprawdzany jest przed każdą iteracją.
+          Jeśli warunek jest spełniony, kod w bloku {} jest wykonywany. 
+        </p>
+
+        <p>
+          Przykład...
+        </p>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen18.jpg" alt="pętla while">
+        </figure>
+
+        <p>
+          Działanie pętli while w tym przykładzie jest następujące:<br/><br/>
+
+          Początkowo, zmienna number jest ustawiona na 0.<br/>
+          Następnie, sprawdzany jest warunek number < 5. Jeśli jest spełniony, wykonuje się blok kodu wewnątrz pętli.<br/>
+          W tym przypadku, wyświetlana jest wartość number przy użyciu System.out.println(number).<br/>
+          Po zakończeniu wykonania bloku kodu, zmienna number jest zwiększana o 1 za pomocą number++.<br/>
+          Proces powtarza się, aż warunek number < 5 nie jest już spełniony (gdy number osiągnie wartość 5 lub większą).<br/>
+          Ostatecznie, na konsoli zostaną wyświetlone liczby od 0 do 4, ponieważ pętla wykonuje się 5 razy (dla wartości number od 0 do 4).
+        </p>
+
+        <br>
+
+        <h2>Pętla do while</h2>
+
+        <pre class="code-example">
+          <code>
+            do {
+                Kod do wykonania przed sprawdzeniem warunku
+            } while (warunek);
+          </code>
+        </pre>
+
+        <p>
+          Instrukcja "do-while" jest podobna do pętli "while", ale różnica polega na tym,
+          że warunek jest sprawdzany po wykonaniu bloku {}.
+          Oznacza to, że kod wewnątrz bloku {} jest wykonywany przynajmniej raz, nawet jeśli warunek na początku nie jest spełniony.
+          Jeśli warunek jest spełniony, kod w bloku {} jest kontynuowany.
+        </p>
+
+        <p>
+          Przykład...
+        </p>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen19.jpg" alt="pętla do while">
+        </figure>
+
+        <p>
+          Działanie pętli do-while w tym przykładzie jest następujące:<br/><br/>
+
+          Początkowo, zmienna i jest ustawiona na 0.<br/>
+          Następnie, wykonywany jest blok kodu wewnątrz pętli, który wyświetla wartość i przy użyciu System.out.println(i).<br/>
+          Po zakończeniu wykonania bloku kodu, zmienna i jest zwiększana o 1 za pomocą i++.<br/>
+          Następnie, warunek i < 5 jest sprawdzany. Jeśli warunek jest spełniony, pętla zostaje ponownie wykonana, a proces się powtarza.<br/>
+          Proces kontynuuje się, dopóki warunek i < 5 jest spełniony.<br/>
+          Ostatecznie, na konsoli zostaną wyświetlone liczby od 0 do 4, ponieważ pętla wykonuje się 5 razy (dla wartości i od 0 do 4).
+        </p>
+
+        <br/>
+
+        <h2>Tablice</h2>
+
+        <p>
+          Tablica w języku Java to struktura danych, która przechowuje kolekcję elementów tego samego typu.
+          Dostęp do jej elementów jest możliwy za pomocą indeksów.
+          Można ją zadeklarować na dwa sposoby:
+        </p>
+
+        <pre class="code-example">
+          <code>
+            int[] numbers;
+            int numbers[];
+          </code>
+        </pre>
+
+        <p>
+          Aby przypisać wartość tablicy, używa się słowa kluczowego <b>new</b>, następnie w nawiasach kwadratowych podaje się rozmiar tablicy.
+        </p>
+
+        <pre class="code-example">
+          <code>
+            numbers  = new int[5];
+          </code>
+        </pre>
+
+        <p>Przykład...</p>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen20.jpg" alt="tablica w języku java">
+        </figure>
+
+        <p>
+          <b>int[] numbers = new int[5];</b>
+          Tworzy nową tablicę numbers o rozmiarze 5, która będzie przechowywać liczby całkowite.<br/>
+          Pięć kolejnych instrukcji to przypisanie różnych pięciu wartości liczbowych do każdego elementu tablicy.<br/>
+          <b>Należy zwrócić uwagę na fakt, że indeksy zaczynają się od 0, a nie od 1.</b><br/>
+          Pięć następnych instrukcji to wyświetlanie każdego elementu według jego indeksu.<br/>
+        </p>
+
+        <br/>
+
+        
+
+        <br/>
+
+        <div class="navigation">
+            <button onClick='navigate("java4.html")'><span>&#8592;</span> poprzedni temat</button>
+            <button onClick='navigate("java6.html")'>następny temat <span>&#8594;</span></button>
+        </div><br/>
+
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.facebook.com/profile.php?id=100092326486712">
+        <img class="icon" src="img/facebook_icon.png" alt="facebook logo"></img>
+      </a>
+      <a href="https://www.youtube.com/@programaster">
+        <img class="icon" src="img/youtube_icon.png" alt="youtube logo"></img>
+      </a>
+      <a href="https://www.instagram.com/programaster0/">
+        <img class="icon" src="img/instagram_icon.png" alt="instagram logo"></img>
+      </a>
+      <br/>
+      <label>2023 © Wszelkie prawa zastrzeżone.</label>
+      <a href="terms.html">Regulamin</a> <label> | </label> <a href="privacy-politics.html">Polityka prywatności</a>
+    </footer>
+      
+  </body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+     <!--Font Settings-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+
+    <link rel="canonical" href="https://programaster.pl/index.html">
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Darmowy serwis do nauki programowania">
+    <meta name="keywords" content="programowanie, kurs, java, za darmo, początkujący">
+    <meta name="author" content="Jarosław Masłowski">
+
+    <title>Programaster</title>
+
+  </head>
+  <body>
+
+    <noscript>Aby wyświetlić zawartość strony zainstaluj JavaScript</noscript>
+
+    <div id="cookie-banner">
+      Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
+      <button id="accept-button">Zgadzam się</button>
+    </div>
+    <script src="js/googleAnalytics.js"></script>
+
+    <script src="js/headerFunctions.js"></script>
+    <header class="header">
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="logo"></a>
+      <nav>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="content">
+
+        <h1>Kurs Java - Programowanie obiektowe</h1>
+
+        <div class="navigation">
+          <button onClick='navigate("java5.html")'><span>&#8592;</span> poprzedni temat</button>
+          <!-- <button onClick='navigate("java7.html")'>następny temat <span>&#8594;</span></button> -->
+        </div><br/>
+
+        <p>
+          W poprzednim temacie przedstawione zostały zmienne, których głównym zadaniem jest przechowanie wartości.
+          Obiekt jest rodzajem zmiennej, która posiada <b>stan oraz zachowanie</b>.
+          Oznacza to, że obiekt może przechować wartości i uruchamiać metody.
+        </p>
+
+        <p>
+          Bardzo istotnym typem danych w Javie jest typ <b>String</b>, który słóży do przechowania ciągu znaków.
+          Typ String jest obiektowy i podczas deklaracji zmiennej tego i innych typów obiektowych należy pisać je z dużej litery.
+        </p>
+
+        <figure>
+          <img style="width: 300px" src="img/string_example.jpg" alt="kod źródłowy klasy">
+        </figure>
+        <br/>
+
+        <h2>Tworzenie własnych obiektów</h2>
+
+        <p>
+          Aby utworzyć własny obiekt, trzeba najpierw zdefiniować jego strukturę, a definicją jego struktury jest klasa.
+          Dobrym przykładem obiektu może być samochód.
+          Jego stanem może być marka, model i kolor, a zachowaniem uruchomienie i zatrzymanie pracy silnika.
+        </p>
+        <p>
+          W projekcie "javaTraining" z poprzedniego tematu utwórz klasę "Car" w folderze src i uzupełnij zawartość klasy według ilustracji.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen21.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Zmienne zadeklarowane w ciele klasy nazywane są <b>polami klasy</b> i reprezentują one stan obiektu.
+          W przypadku klasy Car są to brand, model i color. Wszystkie pola są typu String, ponieważ mają przechować ciąg znaków.
+        </p>
+
+        <p>
+          Następnie zdefiniwane są metody engineOn() i engineOff().
+          Przed ich nazwą podany jest typ String, ponieważ w tym miejscu określa się jaki typ danych zwraca metoda po wykonaniu instrukcji w jej ciele.
+          Obie metody mają zwrócić ciąg znaków, dlatego ich typem zwracanym jest String.
+          W ciele metod znajduje się słowo kluczowe <b>return</b>, po użyciu którego należy podać wartość, jaką ma zwracać metoda.
+          Po słowie kluczowym return w cudzysłowie określony jest ciąg znaków do zwrócenia, odpowiednio dla każdej metody.
+        </p>
+
+        <p>
+          Posiadając zdefiniowaną klasę Car, można teraz utworzyć instancję klasy (obiekt).
+          W metodzie startowej w klase Main można utworzyć przykładowy obiekt samochodu.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen22.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Pierwsza instrukcja metody main to utworzenie zmiennej typu <b>Car</b> o nazwie <b>car</b> i przypisanie jej nowej instancji klasy Car.
+          Za utworzenie nowej instancji obiektu odpowiada słowo kluczowe <b>new</b> i podanie konstruktora klasy <b>Car()</b>.
+          Jest to metoda, którą posiada każda klasa. Jeśli nie zdefiniuje się w klasie konstruktora, zostaje utworzony domyślny, nie przyjmujący żadnych parametrów.
+          Jego nazwa musi być taka sama jak nazwa klasy, w której się znajduje i zwraca on utworzoną instancję klasy,
+          według parametrów, przekazanych w okrągłych nawiasach. Przekazanie parametrów jes opcjonalne, więc nawiasy mogą być puste.
+        </p>
+
+        <p>
+          Kolejne pięć poleceń to wyświetlanie zawartości utworzonej instancji obiektu "car".
+          Do wyświetlenia zawartości pól klasy użyta jest kropka i nazwa pola, którego zawartość ma być wyświetlona.<br/>
+          <b>car.brand</b><br/>
+          Analogiczna sytuacja jest w przypadku wywołania metod. Różnica polega na tym, że przy metodach trzeba dopisać nawiasy.<br/>
+          <b>car.engineOn()</b><br/>
+        </p>
+
+        <p>
+          Po uruchomieniu programu, w konsoli wyświetla się 5 linii:<br/><br/>
+          <b>Audi</b> ponieważ car.brand = "Audi"<br/>
+          <b>R8</b> ponieważ car.model = "R8"<br/>
+          <b>Black</b> ponieważ car.color = "Black"<br/>
+          <b>Uruchomienie silnika</b> ponieważ car.engineOn() zwraca ciąg znaków "Uruchomienie silnika"<br/>
+          <b>Zatrzymanie pracy silnika</b> ponieważ car.engineOff() zwraca ciąg znaków "Zatrzymanie pracy silnika"<br/>
+        </p><br/>
+
+        <h2>Wykorzystanie konstruktora</h2>
+
+        <p>
+          No dobra.. mamy więc klasę "Car", która pozwala nam na utworzenie czarnego Audi R8.
+          Gdybyśmy chcieli uwtorzyć inny samochód w przedstawiony sposób, wymagałoby to utworzenia kolejnej klasy, ponieważ podane pola mają przypisane stałe wartości.
+          Można dokonać jednak refaktoryzacji (przebudowy) kodu, aby klasa Car pozwalała na tworzenie instancji z innym stanem (inne marki, modele i kolory).
+          Aby tego dokonać potrzebny będzie właśnie wyżej wspomniany konstruktor, który przypisze polom instancji klasy wartości według podanych parametrów.
+        </p>
+
+        <p>
+          W klasie Car pozostaw tylko deklarację jej pól i usuń przypisane im wartości a następnie utwórz taki konstruktor:
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen23.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Konstruktor musi posiadać modyfikator dostępu <b>public</b>, aby dało się go użyć w innych klasach (na przykład w klasie Main).<br/>
+          Nie posiada on typu zwracanego jak inne metody, a jego nazwa jest taka sama, jak nazwa klasy.<br/>
+          Przyjmuje 3 parametry typu String: <b>String brand</b>, <b>String model</b>, <b>String color</b>.
+          Użycie słowa kluczowego <b>this</b> oznacza odniesienie do instancji klasy, więc <b>this.brand</b> to odniesienie do pola brand danej instancji.<br/>
+          <b>this.brand = brand;</b> to przypisanie wartości parametru z konstruktora do pola klasy.<br/>
+          Aby łatwiej było odróżnić co gdzie jest przypisane IntelliJ podświetla pola klasy na fioletowo a parametry metody na biało.
+        </p>
+
+        <p>
+          W metodzie startowej main można teraz utworzyć kilka modeli samochodów, przekazując przez konstruktor inne parametry dla każdej instancji:
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen24.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Jak widać po wynikach konsoli, klasa Car pozwala teraz na utworzenie instancji obiektów o różnych parametrach.
+        </p><br/>
+
+        <h2>Enkapsulacja - dobre praktyki programowania</h2>
+
+        <p>
+          Powyżej przedstawiłem jak tworzyć pola i metody klasy w możliwie zrozumiały sposób,
+          jednak podczas tworzenia metod i pól klasy zalecane jest zachowanie zasady enkapsulacji.<br/>
+          Enkapsulacja ma na celu izolowanie stanu i zachowania obiektu, aby zapewnić integralność danych i kontrolę nad operacjami,
+          które można na nim wykonać.
+          Oznacza to, że zmienne (pola) obiektu są zazwyczaj prywatne,
+          a dostęp do nich odbywa się poprzez publiczne metody (gettery i settery).
+        </p>
+
+        <p>Aby klaca Car była napisana zgodnie z zasadą enkapsulacji wprowadź następujące zmiany zgodnie z ilustracją:</p>
+
+        <figure>
+          <img style="width: 500px" src="img/intellij_screen25.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Po dodaniu modyfikatorów dostępu <b>private</b> do pól klasy i <b>public</b> do metod, IntelliJ informuje nas o błędach w klasie Main.
+          Problem wynika z tego, że w klasie main próbujemy uzyskać wartość pól, do których nie mamy już dostępu (za pomocą kropki),
+          z powodu oznaczenia ich jako <b>private</b>.
+        </p>
+
+        <figure>
+          <img style="width: 300px" src="img/intellij_screen26.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Od teraz aby uzyskać dostęp do pól klasy trzeba będzie skorzystać z <b>getterów i setterów</b> zgodnie z zasadą enkapsulacji.
+          Gettery to metody, które zwracają wartość pola klasy, a settery mogą modyfikować pola klasy, kiedy jest to potrzebne.
+          Dostęp do getterów i setterów jest możliwy poza klasą ponieważ posiadają modyfikator dostępu <b>public</b>.
+        </p>
+
+        <p>
+          Dodaj gettery i settery do klasy Car według ilustracji:
+        </p>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen27.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Od teraz dostęp do pól klasy Car możliwy jest z użyciem getterów. Popraw kod w klasie Main zgodnie z ilustracją:
+        </p>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen28.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <p>
+          Jeśli chcesz zmienić kolor samochodu, możesz użyć teraz metody setColor()
+          podając w nawiasach nowy kolor samochodu, zapisany ciągiem znaków i następnie sprawdzić czy kolor się zmienił, używając getColor()
+        </p>
+
+        <figure>
+          <img style="width: 600px" src="img/intellij_screen29.jpg" alt="kod źródłowy klasy">
+        </figure>
+
+        <div class="navigation">
+          <button onClick='navigate("java5.html")'><span>&#8592;</span> poprzedni temat</button>
+          <!-- <button onClick='navigate("java7.html")'>następny temat <span>&#8594;</span></button> -->
+        </div><br/>
+
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.facebook.com/profile.php?id=100092326486712">
+        <img class="icon" src="img/facebook_icon.png" alt="facebook logo"></img>
+      </a>
+      <a href="https://www.youtube.com/@programaster">
+        <img class="icon" src="img/youtube_icon.png" alt="youtube logo"></img>
+      </a>
+      <a href="https://www.instagram.com/programaster0/">
+        <img class="icon" src="img/instagram_icon.png" alt="instagram logo"></img>
+      </a>
+      <br/>
+      <label>2023 © Wszelkie prawa zastrzeżone.</label>
+      <a href="terms.html">Regulamin</a> <label> | </label> <a href="privacy-politics.html">Polityka prywatności</a>
+    </footer>
+      
+  </body>
+</html>
