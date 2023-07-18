@@ -57,6 +57,28 @@ main {
     text-align: center;
 }
 
+.add-bottom {
+    padding-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+.add-float-left {
+    float: left;
+    position: fixed;
+    margin-top: 150px;
+    opacity: 60%;
+}
+
+.add-float-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 150px;
+    opacity: 60%;
+}
+
+
 footer {
     text-align: center;
     margin-top: 30px;
@@ -64,6 +86,7 @@ footer {
     color: var(--font-footer);
     margin-top: 30px;
     padding: 10px;
+    z-index: 9999;
 }
 
 header {
@@ -243,7 +266,25 @@ footer a {
 /* -------------------------------------- RESPONSIVITY --------------------------------------*/
 
 
+@media (max-width: 1100px) {
+    .add-float-left {
+        display: none;
+    }
+
+    .add-float-right {
+        display: none;
+    }
+
+    .add-bottom {
+        display: block;
+    }
+}
+
 @media (max-width: 767px) {
+
+    .add-bottom {
+        display: block;
+    }
 
     main {
         width: 100%;
