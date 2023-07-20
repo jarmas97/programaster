@@ -63,12 +63,34 @@
             <button onClick='navigate("java6.html")'>następny temat <span>&#8594;</span></button>
         </div><br/>
 
+        <h2>Komentarze w kodzie</h2>
+
+        <p>
+          Komentarze w kodzie Java pełnią funkcję wyłącznie informacyjną.
+          Umożliwiają dodawanie wyjaśnień, dokumentacji i informacji pomocniczych,
+          ale nie są uwzględniane w procesie kompilacji ani wykonania programu.
+        </p>
+
+        <p>Komentarz jednolinijkowy:</p>
+
+        <figure>
+          <img style="width: 600px" src="img/comment1.jpg" alt="komentarz java">
+        </figure>
+
+        <p>Komentarz wielolinijkowy:</p>
+
+        <figure>
+          <img style="width: 522px" src="img/comment2.jpg" alt="komentarz java">
+        </figure>
+
+        <br/>
+
         <h2>Instrukcja warunkowa if else</h2>
 
         <p>
           Instrukcja "if" sprawdza warunek umieszczony w nawiasach okrągłych.
-          Jeśli warunek jest spełniony, wykonuje się kod w bloku po słowie kluczowym "if".
-          W przeciwnym razie, wykonuje się kod w bloku po słowie kluczowym "else".
+          Jeśli warunek jest spełniony, wykonuje się kod po słowie kluczowym "if".
+          W przeciwnym razie, wykonuje się kod po słowie kluczowym "else".
           Blok "else" jest opcjonalny.
         </p>
 
@@ -98,7 +120,33 @@
         </p>
 
         <figure>
-          <img style="width: 700px" src="img/intellij_screen14.jpg" alt="instrukcja warunkowa if else IntelliJ IDEA">
+          <img style="width: 700px" src="img/intellij_screen14.jpg" alt="instrukcja warunkowa if else">
+        </figure>
+
+        <p>
+          Jeśli istnieje potrzeba sprawdzenia wielu warunków, można zastosować inną instrukcję if else.
+        </p>
+
+        <pre class="code-example">
+          <code>
+            if (warunek) {
+
+                instrukcje do wykonania, jeśli warunek się spełni
+
+            } else if (kolejny warunek) {
+
+              instrukcje do wykonania, jeśli warunek się spełni
+
+            }  else {
+
+                instrukcje do wykonania, jeśli żaden warunek się nie spełni
+                
+            }
+          </code>
+        </pre>
+
+        <figure>
+          <img style="width: 700px" src="img/intellij_screen30.jpg" alt="instrukcja warunkowa if else">
         </figure>
 
         <br/>
@@ -295,6 +343,51 @@
           Pięć następnych instrukcji to wyświetlanie każdego elementu według jego indeksu.<br/>
         </p>
 
+        <p>
+          Tablicę można również wypełnić elementami podając ich zawartość od razu w nawiasach klamrowych podczas deklaracji.
+        </p>
+
+        <figure>
+          <img style="width: 400px" src="img/intellij_screen31.jpg" alt="tablica java IntelliJ IDEA">
+        </figure>
+
+        <p>
+          Nie trzeba też przypisywać każdego elementu tablicy oddzielnie, możesz przypisać wartości tablicy za pomocą pętli.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/array1.jpg" alt="tablica java IntelliJ IDEA">
+        </figure>
+
+        <p>
+          Istotnym fragmentem jest tutaj przypisanie wartości elementom tablicy.
+          Tablica posiada 100 elementów ale ich indeksy są liczone od 0 do 99, ponieważ zero jest również wartością.
+          Dlatego właśnie chcąc zapisać liczby od 1 do 100 należy użyć instrukcji: numbers[i] = i+1;
+        </p>
+
+        <p>
+          Zwróć uwagę, że słowo kluczowe "for" jest w tym przypadku podświetlone.
+        </p>
+
+        <figure>
+          <img style="width: 500px" src="img/array2.jpg" alt="tablica java IntelliJ IDEA">
+        </figure>
+
+        <p>
+          IntelliJ sugeruje, że w przypadku iteracji w pętli po elementach tablicy można użyć innej konstrukcji.
+          Od wersji Java 5 istnieje uproszczony zapis pętli w takim przypadku.
+          Możesz uprościć pętlę najeżdżając na nią myszką i klikając jak na ilustracji.<br/>
+          Po uproszczeniu otrzymasz taki wynik...
+        </p>
+
+        <figure>
+          <img style="width: 400px" src="img/array3.jpg" alt="tablica java IntelliJ IDEA">
+        </figure>
+
+        <p>
+          Można zinterpretować instrukcję w ten sposób - dla każdego elementu "int number" w tablicy "numbers" wykonaj instrukcje w klamrach {}.
+        </p>
+
         <br/>
 
         <h2>Ćwiczenia</h2>
@@ -309,6 +402,26 @@
           5. petla do while<br/>
           6. tablica
         </p>
+
+        <figure>
+          <img style="width: 500px" src="img/example1.jpg" alt="java if else">
+        </figure>
+
+        <figure>
+          <img style="width: 500px" src="img/example2.jpg" alt="java switch case">
+        </figure>
+
+        <figure>
+          <img style="width: 400px" src="img/example3.jpg" alt="java pętla for">
+        </figure>
+
+        <figure>
+          <img style="width: 400px" src="img/example4.jpg" alt="java pętla while">
+        </figure>
+
+        <figure>
+          <img style="width: 400px" src="img/example5.jpg" alt="java petla do while">
+        </figure>
 
         <br/>
 
