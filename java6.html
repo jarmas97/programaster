@@ -42,50 +42,35 @@
         <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
       </nav>
     </header>
-
-    <!--Adsterra side adds-->
-
-    <div class="add-float-left">
-      <script type="text/javascript" src="js/leftSideAdd.js"></script>
-    </div>
-
-    <div class="add-float-right">
-      <script type="text/javascript" src="js/rightSideAdd.js"></script>
-    </div>
     
     <main>
       <div class="content">
 
-        <h1>Kurs Java - Programowanie obiektowe</h1>
+        <h1>Kurs Java - Programowanie obiektowe - część I</h1>
 
         <div class="navigation">
           <button onClick='navigate("java5.html")'><span>&#8592;</span> poprzedni temat</button>
-          <!-- <button onClick='navigate("java7.html")'>następny temat <span>&#8594;</span></button> -->
+          <button onClick='navigate("java7.html")'>następny temat <span>&#8594;</span></button>
         </div><br/>
 
         <p>
-          W poprzednim temacie przedstawione zostały zmienne, których głównym zadaniem jest przechowanie wartości.
-          Obiekt jest rodzajem zmiennej, która posiada <b>stan oraz zachowanie</b>.
-          Oznacza to, że obiekt może przechować wartości i uruchamiać metody.
+          Obiekty są instancjami klas, a klasa definiuje jaki będzie stan i zachowanie obiektu.<br/>
+          Do tej pory w kursie utworzona była klasa Main, która posiada metodę main(). Głównym zadaniem tej Main było rozpoczęcie
+          pracy programu, za pomocą metody main().
         </p>
 
         <p>
-          Bardzo istotnym typem danych w Javie jest typ <b>String</b>, który słóży do przechowania ciągu znaków.
-          Typ String jest obiektowy i podczas deklaracji zmiennej tego i innych typów obiektowych należy pisać je z dużej litery.
+          Aby lepiej zrozumieć klasy i ich instancje (obiekty) najlepiej przedstawić będzie przykład.
+          Dobrym przykładem klasy może być samochód. Utworzenie klasy Samochód to utworzenie projektu samochodu, definicja jego właściwości.
+          Jego stanem może być marka, model i kolor, a zachowaniem uruchomienie i zatrzymanie pracy silnika.
+          Następnie po produkcji tego samochodu (utworzeniu instancji) według projektu (według klasy),
+          można korzystać z jego funkcjonalności.
         </p>
 
-        <figure>
-          <img style="width: 300px" src="img/string_example.jpg" alt="zmienna String">
-        </figure>
         <br/>
 
         <h2>Tworzenie własnych obiektów</h2>
 
-        <p>
-          Aby utworzyć własny obiekt, trzeba najpierw zdefiniować jego strukturę, a definicją jego struktury jest klasa.
-          Dobrym przykładem obiektu może być samochód.
-          Jego stanem może być marka, model i kolor, a zachowaniem uruchomienie i zatrzymanie pracy silnika.
-        </p>
         <p>
           W projekcie "javaTraining" z poprzedniego tematu utwórz klasę "Car" w folderze src i uzupełnij zawartość klasy według ilustracji.
         </p>
@@ -144,7 +129,7 @@
         <h2>Wykorzystanie konstruktora</h2>
 
         <p>
-          No dobra.. mamy więc klasę "Car", która pozwala nam na utworzenie czarnego Audi R8.
+          Mamy więc klasę "Car", która pozwala nam na utworzenie czarnego Audi R8.
           Gdybyśmy chcieli uwtorzyć inny samochód w przedstawiony sposób, wymagałoby to utworzenia kolejnej klasy, ponieważ podane pola mają przypisane stałe wartości.
           Można dokonać jednak refaktoryzacji (przebudowy) kodu, aby klasa Car pozwalała na tworzenie instancji z innym stanem (inne marki, modele i kolory).
           Aby tego dokonać potrzebny będzie właśnie wyżej wspomniany konstruktor, który przypisze polom instancji klasy wartości według podanych parametrów.
@@ -237,20 +222,29 @@
           <img style="width: 600px" src="img/intellij_screen29.jpg" alt="enkapsulacja IntelliJ IDEA">
         </figure>
 
+        <h2>Zasada KISS (Keep It Simple, Stupid)</h2>
+
+        <p>
+          Zasada KISS mówi, że rozwiązania powinny być trzymane proste, łatwe do zrozumienia i pozbawione zbędnych złożoności.
+          Tworzenie zbyt skomplikowanego kodu może prowadzić do trudności w zrozumieniu, utrzymaniu i rozwijaniu aplikacji.
+          Oto kilka zaleceń, jak stosować zasadę KISS w Javie:
+        </p>
+
+        <p>
+          1. Unikaj nadmiernego używania zaawansowanych mechanizmów języka, jeśli prostsze rozwiązanie spełnia wymagania.<br/>
+          2. Twórz metody o jednoznacznych i klarownych celach, unikaj tworzenia długich i zbyt złożonych funkcji.<br/>
+          3. Wybieraj odpowiednie nazwy zmiennych i metod, które są zrozumiałe dla innych programistów.
+        </p>
+
+        <br/>
 
         <div class="navigation">
           <button onClick='navigate("java5.html")'><span>&#8592;</span> poprzedni temat</button>
-          <!-- <button onClick='navigate("java7.html")'>następny temat <span>&#8594;</span></button> -->
+          <button onClick='navigate("java7.html")'>następny temat <span>&#8594;</span></button>
         </div><br/>
 
       </div>
     </main>
-
-    <!--Adsterra bottom adds-->
-
-    <div class="add-bottom">
-      <script type="text/javascript" src="js/bottomAdd.js"></script>
-    </div>
 
     <footer>
       <a href="https://www.facebook.com/profile.php?id=100092326486712">

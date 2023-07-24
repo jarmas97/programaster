@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2749072429683790"
+     crossorigin="anonymous"></script>
+
+     <!--Font Settings-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika+Negative&display=swap" rel="stylesheet">
+
+    <link rel="canonical" href="https://programaster.pl/index.html">
+
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Darmowy serwis do nauki programowania">
+    <meta name="keywords" content="programowanie, kurs, java, za darmo, początkujący">
+    <meta name="author" content="Jarosław Masłowski">
+
+    <title>Programaster</title>
+
+  </head>
+  <body>
+
+    <noscript>Aby wyświetlić zawartość strony zainstaluj JavaScript</noscript>
+
+    <div id="cookie-banner">
+      Ta strona wykorzystuje narzędzia analityczne i reklamowe. Klikając "Zgadzam się", wyrażasz zgodę na ich użycie.
+      <button id="accept-button">Zgadzam się</button>
+    </div>
+    <script src="js/googleAnalytics.js"></script>
+
+    <script src="js/headerFunctions.js"></script>
+    <header class="header">
+      <a href="index.html"><img class="logo" src="img/logo.png" alt="logo programaster"></a>
+      <nav>
+        <button class="tab" onClick='navigate("index.html")'>Strona główna</button>
+        <button class="tab" onClick='navigate("author.html")'>Kontakt</button>
+      </nav>
+    </header>
+    
+    <main>
+      <div class="content">
+
+        <h1>Kurs Java - Programowanie obiektowe - część II</h1>
+
+        <div class="navigation">
+          <button onClick='navigate("java6.html")'><span>&#8592;</span> poprzedni temat</button>
+          <!-- <button onClick='navigate("java8.html")'>następny temat <span>&#8594;</span></button> -->
+        </div><br/>
+
+        <h2>Dziedziczenie</h2>
+
+        <p>
+          Dziedziczenie jest jednym z fundamentów programowania obiektowego i odgrywa kluczową rolę w języku Java.
+          Pozwala na tworzenie hierarchii klas, gdzie klasa podrzędna (dziedzicząca)
+          może odziedziczyć pola i metody z klasy nadrzędnej (bazowej).
+        </p>
+        
+        <p>
+          Aby klasa dziedziczyła inną, należy podczas jej deklaracji wpisać słowo kluczowe <b>extends</b> po nazwie klasy,
+          a następnie klasę z której dziedziczy.
+          Dobrym przykładem dziedziczenia może być hierarchia klas zwierząt.
+          Klasa Animal (zwierzę) i dziedziczące ją klasy Dog (pies) oraz Cat (kot).
+        </p>
+
+        <p>W projekcie "javaTraining" utwórz klasę Animal, która posiada metodę makeSound().</p>
+
+        <figure>
+          <img style="width: 600px" src="img/inheritance1.jpg" alt="klasa Animal java">
+        </figure>
+
+        <p>
+          Następnie utwórz klasę Dog, która dziedziczy po klasie Animal.<br/>
+          Możesz teraz zmienić działanie dziedziczonej metody w klasie Dog.
+          IntelliJ pozwala wykryć dziedziczoną metodę i wygenerować kod metody w klasie podrzędnej.
+          Wciśnij ALT + INSERT i wybierz <b>Override Methods</b>.
+        </p>
+
+        <figure>
+          <img style="width: 400px" src="img/inheritance2.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Wybierz metodę makeSound() i kliknij OK.
+        </p>
+
+        <figure>
+          <img style="width: 500px" src="img/inheritance3.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Tak wygląda domyślna konstrukcja dziedziczonej metody po klasie nadrzędnej.
+        </p>
+
+        <figure>
+          <img style="width: 350px" src="img/inheritance4.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          <b>@Override</b> to adnotacja. Jest specjalnym wskaźnikiem, którym oznacza się metodę w klasie podrzędnej,
+          gdy ta metoda nadpisuje (przeładowuje) metodę z klasy nadrzędnej.
+          Dzięki tej adnotacji, kompilator Java może sprawdzić, czy rzeczywiście przepisujemy metodę z klasy bazowej,
+          co pozwala na wykrycie błędów w przypadku nieprawidłowych sygnatur lub braku takiej metody w klasie nadrzędnej.
+        </p>
+
+        <p>
+          W ciele metody znajduje się instrukcja ze słowem kluczowym <b>super</b>, która odnosi się do klasy nadrzędnej.
+          Instrukcja super.makeSound(); to wykonanie metody klasy Animal.
+          Usuń ją i w jej miejsce wpisz "System.out.println("Woof");", aby obiekt Dog (pies) szczekał zamiast wydawać dźwięk "Głos zwierzęcia".
+        </p>
+
+        <figure>
+          <img style="width: 350px" src="img/inheritance5.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Analigocznie utwórz Car (kot) dziedziczącą po klasie Animal i zmień implementację metody makeSound() w klasie kat odpowiednio dla kota.
+        </p>
+
+        <figure>
+          <img style="width: 450px" src="img/inheritance6.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          W metodzie main() w klasie Main utwórz instancje klas Animal, Dog, Cat i dla każdej wywołaj metodę makeSound(). 
+        </p>
+
+        <figure>
+          <img style="width: 450px" src="img/inheritance7.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Nazwa metody jest taka sama w każdej klasie, ale dla typów dziedzczących wykonuje inne operacje.
+        </p>
+
+        <br/>
+
+        <h2>Klasa Object</h2>
+
+        <p>
+          W Javie każda utworzona nowa klasa dziedziczy po klasie Object.
+          W praktyce oznacza to, że każda klasa, którą tworzysz, ma dostęp do metod i funkcji zdefiniowanych w klasie Object.
+          Oto metody dziedziczone po klasie Object:
+        </p>
+
+        <p>
+          <b>toString()</b> Metoda ta zwraca reprezentację tekstową obiektu.
+          Możesz ją nadpisać w swoich klasach, aby zwracała bardziej odpowiednią dla twoich potrzeb
+          reprezentację obiektu w postaci tekstowej.<br/><br/>
+
+          <b>equals()</b> Metoda ta służy do porównywania dwóch obiektów pod względem równości.
+          Podobnie jak toString(), możesz ją nadpisać, aby obiekty twojej klasy były porównywane w sposób
+          bardziej odpowiedni dla twoich potrzeb.<br/><br/>
+
+          <b>hashCode()</b> Metoda ta zwraca wartość liczbową (skrót) reprezentującą unikalny identyfikator obiektu.
+          Jest używana w różnych mechanizmach w Javie, takich jak kolekcje (np. HashSet, HashMap),
+          które wykorzystują tę wartość do szybkiego wyszukiwania i porównywania obiektów.<br/>
+          Informacje o kolekcjach znajdują się w dalszej części kursu.<br/><br/>
+
+          Dostępne są równiez metody: getClass(), clone(), finalize(), notify(), notifyAll(), wait() i finalize().
+          Ich wykorzystanie przedstawione będzie również w dalszej części kursu.
+        </p>
+
+        <p>
+          Aby przedstawić działanie metod klasy Object, przedstawię teraz wykorzystanie metody toString().<br/>
+          Utwórz nową klasę "User" (użytkownik), posiadającą pola typu String: username, email, password.
+          Następnie konstruktor, przyjmujący wartości podczas tworzenia obiektu i przypisujący je polom klasy.
+        </p>
+
+        <p>
+          To dobra okazja, by skorzystać ponownie z genrowania kodu. Po utworzeniu pól klasy możesz wygenerować konstruktor przyjmujący wartość pól.
+          Pod utworzonymi polami klasy wciśnij ALT + INSERT i wybierz "Constructor".
+        </p>
+
+        <figure>
+          <img style="width: 450px" src="img/inheritance8.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Następnie zaznacz wszystkie pola i kliknij OK.
+        </p>
+
+        <figure>
+          <img style="width: 450px" src="img/inheritance9.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Otrzymasz wygenerowany konstruktor, przyjmujący i zapisujący wartości pól.
+        </p>
+
+        <figure>
+          <img style="width: 450px" src="img/inheritance10.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Jeśli utworzysz teraz obiekt typu User w metodzie main i spróbujesz wyświetlić jego zawartość,
+          otrzymasz taki ciąg znaków (lub podobny).
+        </p>
+
+        <figure>
+          <img style="width: 550px" src="img/inheritance11.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Dzieje się tak, ponieważ metoda println() służy do wyświetlania tekstu w konsoli.
+          Aby wyświetlić tekstową reprezentację obiektu typu User metoda println() przekształca obiekt w tekst,
+          korzystając z domyślnej reprezentacji metody toString() w klasie Object.
+          Domyślna metoda toString() w klasie Object tłumaczy objekt na tekst według wzoru: (nazwa klasy)@(hashcode).
+          Informacje o hashcode znajdują się w dalszej części kursu.
+        </p><br/>
+
+        <h2>Metoda toString()</h2>
+
+        <p>
+          Aby zmienić reprezentację tekstową klasy User nadpisz w niej metodę toString(), generując kod automatycznie.
+          Pod konstruktorem klasy User wciśnij CTRL + O (skrót do nadpisywania metod klasy bazowej) i wybierz metodę toString().
+        </p>
+
+        <figure>
+          <img style="width: 550px" src="img/inheritance12.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Wygenerowana metoda domyślnie wykonuje kod metody, z której dziedziczy.
+        </p>
+
+        <figure>
+          <img style="width: 300px" src="img/inheritance13.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Zmień implementację metody tak, aby zwracała ona wartość pół klasy.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/inheritance14.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+        <p>
+          Po ponownym uruchomieniu programu otrzymasz teraz taki wynik.
+        </p>
+
+        <figure>
+          <img style="width: 700px" src="img/inheritance15.jpg" alt="dziedziczenie klasy java">
+        </figure>
+
+
+        <br/>
+
+        <div class="navigation">
+          <button onClick='navigate("java6.html")'><span>&#8592;</span> poprzedni temat</button>
+          <!-- <button onClick='navigate("java8.html")'>następny temat <span>&#8594;</span></button> -->
+        </div><br/>
+
+      </div>
+    </main>
+
+    <footer>
+      <a href="https://www.facebook.com/profile.php?id=100092326486712">
+        <img class="icon" src="img/facebook_icon.png" alt="facebook logo"></img>
+      </a>
+      <a href="https://www.youtube.com/@programaster">
+        <img class="icon" src="img/youtube_icon.png" alt="youtube logo"></img>
+      </a>
+      <a href="https://www.instagram.com/programaster0/">
+        <img class="icon" src="img/instagram_icon.png" alt="instagram logo"></img>
+      </a>
+      <br/>
+      <label>2023 © Wszelkie prawa zastrzeżone.</label>
+      <a href="terms.html">Regulamin</a> <label> | </label> <a href="privacy-politics.html">Polityka prywatności</a>
+    </footer>
+      
+  </body>
+</html>

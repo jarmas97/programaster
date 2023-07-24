@@ -50,6 +50,27 @@
     <priority>1.0</priority>
   </url>
 
+   <url>
+    <loc>https://programaster.pl/java6.html</loc>
+    <lastmod>2023-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+   <url>
+    <loc>https://programaster.pl/java7.html</loc>
+    <lastmod>2023-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+   <url>
+    <loc>https://programaster.pl/java8.html</loc>
+    <lastmod>2023-06-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
   <url>
     <loc>https://programaster.pl/author.html</loc>
     <lastmod>2023-06-20</lastmod>
